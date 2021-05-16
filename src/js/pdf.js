@@ -247,7 +247,7 @@ function getCurriculumVitae() {
         ol: createSimpleListPDF(publications.querySelector("ol")),
         margin: [10, 0]
     }]);
-    content.push("\n\n\n\n")
+    content.push("\n\n\n\n");
     */
 
     // Skills
