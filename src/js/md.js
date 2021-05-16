@@ -11,6 +11,14 @@ function md() {
     }
 }
 
+function extractTextMD(element) {
+    if (element.querySelector("a")) {
+        return extractLinkMD(element);
+    } else {
+        return clean(element.textContent);
+    }
+}
+
 function extractLinkMD(element) {
     var md = "";
     var text = clean(element.innerHTML);
@@ -28,8 +36,9 @@ function extractLinkMD(element) {
 }
 
 function createLinkMD(element) {
-    return "[" + clean(element.innerHTML) + "](" + element.getAttribute("href") + ")";
+    return "[" + clean(element.innerHTML) + "](" + createLink(element.getAttribute("href")) + ")";
 }
+
 
 function createMD() {
 
@@ -38,53 +47,51 @@ function createMD() {
 
     // About
     var about = sections[0];
-    md += "# " + clean(about.querySelector("h1").innerHTML) + "\n<br>\n\n";
+    md += "# " + clean(about.querySelector("h1").textContent) + "\n<br>\n\n";
     var img = document.querySelector("img");
-    md += "![" + img.getAttribute("alt") + "](" + img.getAttribute("src") + ")\n<br>\n\n";
-    md += extractLinkMD(about.querySelector("span")) + "\n<br>\n<br>\n\n";
+    md += "![" + img.getAttribute("alt") + "](" + createLink(img.getAttribute("src")) + ")\n<br>\n\n";
+    md += extractTextMD(about.querySelector("span")) + " · [Online Curriculum Vitae](https://dariocurr.github.io/)" + "\n<br>\n\n";
     md += clean(about.querySelector("p").innerHTML) + "\n<br>\n\n";
-    md += "[Online Resume](https://dariocurr.github.io/)\n<br>\n\n";
     md += Array.from(about.querySelectorAll(".social-icon")).map(socialIcon => createLinkMD(socialIcon)).join(" ");
     md += "\n<br>\n<br>\n<br>\n\n";
 
     // Experience and Education
     for (var i= 1; i < 3; i++) {
         var section = sections[i]
-        md += "## " + clean(section.querySelector("h2").innerHTML) + "\n<br>\n<br>\n\n";
+        md += "## " + clean(section.querySelector("h2").textContent) + "\n<br>\n\n";
         section.querySelectorAll("article").forEach(article => {
             var descriptionDiv = article.firstElementChild;
             var dateDiv = descriptionDiv.nextElementSibling;
-            md += "### " + clean(descriptionDiv.querySelector("h3").innerHTML) + "\n";
-            md += "#### " + clean(descriptionDiv.querySelector("span").innerHTML) + "\n";
-            md += "##### " + clean(dateDiv.querySelector("span").innerHTML) + "\n";
-            article.querySelectorAll("p").forEach(p => {
-                var description;
-                if (p.querySelector("a")) {
-                    description = extractLinkMD(p);
-                } else {
-                    description = p.innerHTML;
-                }
-                md += clean(description) + "\n";
-                })
+            md += "### " + clean(descriptionDiv.querySelector("h3").textContent) + "\n";
+            md += "#### " + clean(descriptionDiv.querySelector("span").textContent) + "\n";
+            md += "##### " + clean(dateDiv.querySelector("span").textContent) + "\n";
+            article.querySelectorAll("p").forEach(p => md += extractTextMD(p) + "\n\n")
+            md = md.substring(0, md.length - 1);
+            article.querySelectorAll("li").forEach(li => md += "- " + extractTextMD(li) + "\n")
             md += "<br>\n<br>\n\n";
         });
+        md = md.substring(0, md.length - 1);
         md += "<br>\n\n";
     }
 
     // Skills
     var skills = sections[3];
-    md += "## " + clean(skills.querySelector("h2").innerHTML) + "\n<br>\n<br>\n\n";
+    md += "## " + clean(skills.querySelector("h2").textContent) + "\n<br>\n\n";
     skills.querySelectorAll("h3").forEach(h3 => {
-        md += "### " + clean(h3.innerHTML) + "\n<br>\n\n";
+        md += "### " + clean(h3.textContent) + "\n<br>\n\n";
         h3.nextElementSibling.querySelectorAll("li").forEach(li => {
             var span = li.querySelector("span");
             if (span) {
                 md += span.outerHTML + " ";
-                var a = li.querySelector("a");
-                if (a) {
-                    md += createLinkMD(a);
+                var description = span.nextElementSibling;
+                if (description.tagName == "A") {
+                    md += createLinkMD(description) + " ";
                 } else {
-                    md += clean(li.textContent);
+                    md += clean(description.textContent);
+                }
+                svgs = li.querySelectorAll("svg");
+                for (var i = 1; i < svgs.length; i++) {
+                    md += svgs[i].outerHTML + " "
                 }
             } else {
                 var svg = li.querySelector("svg");
@@ -92,16 +99,28 @@ function createMD() {
                     md += svg.outerHTML;
                 }
             }
-            md += "\n";
+            md += "\n\n";
         });
+        md = md.substring(0, md.length - 1);
         md += "<br>\n<br>\n\n";
     });
+    md = md.substring(0, md.length - 1);
     md += "<br>\n\n";
 
+    /* Publications
+    var publications = sections[4];
+    md += "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
+    lis = publications.querySelectorAll("li");
+    for(var i = 0; i < lis.length; i++) {
+        md += (i + 1) + ". " + extractTextMD(lis[i]);
+    }
+    md += "\n<br>\n<br>\n<br>\n\n";
+    */
+
     // Interests
-    var interests = sections[4];
-    md += "## " + clean(interests.querySelector("h2").innerHTML) + "\n<br>\n<br>\n\n";
-    md += clean(interests.querySelector("p").innerHTML);
+    var interests = sections[5];
+    md += "## " + clean(interests.querySelector("h2").textContent) + "\n<br>\n\n";
+    md += clean(interests.querySelector("p").textContent);
     
     console.log(md);
 }

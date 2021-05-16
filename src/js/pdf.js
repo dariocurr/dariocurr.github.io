@@ -28,6 +28,16 @@ function pdf(shrinked) {
     }
 }
 
+
+function extractTextPDF(tag) {
+    if (tag.querySelector("a")) {
+        return extractLinkPDF(tag);
+    } else {
+        return clean(tag.innerHTML);
+    }
+}
+
+
 function extractLinkPDF(element) {
     var dicts = [];
     var text = clean(element.innerHTML);
@@ -36,7 +46,7 @@ function extractLinkPDF(element) {
         dicts.push({text: clean(text.substring(0, index)) + " "});
         dicts.push({
             text: clean(a.innerHTML),
-            link: createAssetLink(a),
+            link: createLink(a.getAttribute("href")),
             style: ["link"]
         })
         text = text.substring(index + clean(a.outerHTML).lastIndexOf(">") + 1);
@@ -50,7 +60,7 @@ function extractLinkPDF(element) {
     return dicts;
 }
 
-function createListPDF(ul, width, height) {
+function createSkillsListPDF(ul, width, height) {
     var lis = [];
     ul.querySelectorAll("li").forEach(li => {
         var span = li.querySelector("span");
@@ -60,7 +70,7 @@ function createListPDF(ul, width, height) {
             if (a) {
                 text = {
                     text: clean(a.innerHTML),
-                    link: createAssetLink(a),
+                    link: createLink(a.getAttribute("href")),
                     style: ["link"]
                 };
             } else {
@@ -101,13 +111,15 @@ function createListPDF(ul, width, height) {
     return lis.slice(0, lis.length - 1);
 }
 
-
-function createAssetLink(a) {
-    var link = a.getAttribute("href");
-    if (link.startsWith("assets/")) {
-        return "https://dariocurr.github.io/" + link;
-    }
-    return link;
+function createSimpleListPDF(tag) {
+    var list = []
+    tag.querySelectorAll("li").forEach(li => {
+        list.push({
+            text: extractTextPDF(li),
+            style: "description"
+        });
+    })
+    return list;
 }
 
 
@@ -193,8 +205,8 @@ function getCurriculumVitae() {
                 }, {
                     text: clean(date),
                     alignment: "right",
-                    width: date.length * 1.25 + "%",
-                    margin: [0, 6.5],
+                    width: date.length * 1.20 + "%",
+                    margin: [0, 7.5],
                     style: "date"
                 }]
             });
@@ -203,21 +215,40 @@ function getCurriculumVitae() {
                 style: "subheading"
             });
             article.querySelectorAll("p").forEach(p => {
-                var description;
-                if (p.querySelector("a")) {
-                    description = extractLinkPDF(p);
-                } else {
-                    description = clean(p.innerHTML);
-                }
                 content.push({
-                    text: description,
+                    text: extractTextPDF(p),
                     style: "description"
                 });
+                content.push({
+                    text: "\n",
+                    style: "listDivisor"
+                });
             });
+            content.pop();
+            var ul = article.querySelector("ul");
+            if (ul) {
+                content.push([{
+                    ul: createSimpleListPDF(ul),
+                    margin: [10, 0]
+                }]);
+            }
             content.push("\n\n");
         });
         content.push("\n\n");
     }
+
+    /* Publications 
+    var publications = sections[4];
+    content.push({
+        text: clean(publications.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
+        style: "h2"
+    });
+    content.push([{
+        ol: createSimpleListPDF(publications.querySelector("ol")),
+        margin: [10, 0]
+    }]);
+    content.push("\n\n\n\n")
+    */
 
     // Skills
     var skills = sections[3];
@@ -230,7 +261,7 @@ function getCurriculumVitae() {
         text: clean(h3s[0].textContent).toUpperCase() + "\n\n",
         style: "h3"
     });
-    content.push(createListPDF(h3s[0].nextElementSibling, 15, 10));
+    content.push(createSkillsListPDF(h3s[0].nextElementSibling, 15, 10));
     content.push("\n\n");
     content.push({
         text: clean(h3s[1].textContent).toUpperCase() + "\n\n",
@@ -265,11 +296,11 @@ function getCurriculumVitae() {
         text: clean(h3s[2].textContent).toUpperCase() + "\n\n",
         style: "h3"
     });
-    content.push(createListPDF(h3s[2].nextElementSibling, 15, 10));
+    content.push(createSkillsListPDF(h3s[2].nextElementSibling, 15, 10));
     //content.push("\n\n\n\n")
 
     /* Interests
-    var interests = sections[4];
+    var interests = sections[5];
     content.push({
         text: clean(interests.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
         style: "h2"
@@ -310,6 +341,7 @@ function getCurriculumVitae() {
                 lineHeight: 0.7
             },
             date: {
+                fontSize: 10,
                 color: "#f59d62",
                 lineHeight: 0.7
             },
@@ -337,7 +369,7 @@ function getCurriculumVitae() {
         pageMargins: [40, 40, 40, 35],
         pageBreakBefore: function(currentNode) {
             return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.85) || 
-                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.65);
+                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.75);
         }
     };
 
@@ -446,7 +478,7 @@ function getResume() {
                     alignment: "right",
                     width: maxLength * 1.85 + "%",
                     style: "date",
-                    margin: [0, 3]
+                    margin: [0, 3.5]
                 }],
                 columnGap: 15
             });
@@ -456,6 +488,22 @@ function getResume() {
             });
         });
     }
+
+    /* Publications 
+    var publications = sections[4];
+    columns[0].push({
+        text: "\n",
+        style: "sectionDivisor"
+    })
+    columns[0].push({
+        text: clean(publications.querySelector("h2").innerHTML).toUpperCase(),
+        style: "h2"
+    });
+    columns[0].push([{
+        ol: createSimpleListPDF(publications.querySelector("ol")),
+        margin: [10, 0]
+    }]);
+    */
 
     content.push({
         columns: columns,
@@ -484,7 +532,7 @@ function getResume() {
         text: "\n",
         style: "titleDivisor"
     });
-    columns[0].push(createListPDF(h3s[2].nextElementSibling, 10, 8));
+    columns[0].push(createSkillsListPDF(h3s[2].nextElementSibling, 10, 8));
 
     columns[1].push({
         text: clean(h3s[0].textContent).toUpperCase(),
@@ -494,7 +542,7 @@ function getResume() {
         text: "\n",
         style: "titleDivisor"
     });
-    columns[1].push(createListPDF(h3s[0].nextElementSibling, 10, 8));
+    columns[1].push(createSkillsListPDF(h3s[0].nextElementSibling, 10, 8));
     columns[1].push({
         text: "\n",
         style: "sectionDivisor"
@@ -579,7 +627,8 @@ function getResume() {
             },
             date: {
                 fontSize: 6.5,
-                color: "#f59d62"
+                color: "#f59d62",
+                lineHeight: 0.85
             },
             link: {
                 color: "#f59d62"
