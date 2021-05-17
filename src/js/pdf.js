@@ -369,7 +369,7 @@ function getCurriculumVitae() {
         pageMargins: [40, 40, 40, 35],
         pageBreakBefore: function(currentNode) {
             return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.85) || 
-                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.75);
+                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.69);
         }
     };
 
