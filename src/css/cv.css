@@ -181,11 +181,11 @@ li:not(:first-child) {
     padding-top: 0.25rem;
 }
 
-section.multi-section ul:not(:last-child) {
+section#skills ul:not(:last-child) {
     margin-bottom: 4.5rem;
 }
 
-section.multi-section h3 {
+section#skills h3 {
     margin-bottom: 1rem;
 }
 
