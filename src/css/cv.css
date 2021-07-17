@@ -189,6 +189,10 @@ section#skills h3 {
     margin-bottom: 1rem;
 }
 
+span.fa-li {
+    padding-top: 0.075rem;
+}
+
 span.fa-li + * {
     margin-left: 0.35rem;
 }

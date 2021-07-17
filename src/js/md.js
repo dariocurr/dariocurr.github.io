@@ -118,7 +118,7 @@ function createMD() {
     */
 
     // Interests
-    var interests = sections[5];
+    var interests = sections[4];
     md += "## " + clean(interests.querySelector("h2").textContent) + "\n<br>\n\n";
     md += clean(interests.querySelector("p").textContent);
     

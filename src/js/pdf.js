@@ -78,7 +78,7 @@ function createSkillsListPDF(ul, width, height) {
                     text: clean(li.textContent),
                 };
             }
-            text["margin"] = [0, - ((0.875 * height) - 4.75)];
+            text["margin"] = [0, - ((0.8 * height) - 4.75)];
             var dots = []
             li.querySelectorAll("svg.fa-circle").forEach(svg => {
                 svg.setAttribute("style", "fill: #444444");
@@ -265,17 +265,23 @@ function getCurriculumVitae() {
     content.push("\n\n");
     content.push({
         text: clean(h3s[1].textContent).toUpperCase() + "\n\n",
+        style: "h3"
+    });
+    content.push(createSkillsListPDF(h3s[1].nextElementSibling, 15, 10));
+    content.push("\n\n");
+    content.push({
+        text: clean(h3s[2].textContent).toUpperCase() + "\n\n",
         style: ["h3", "divisor"]
     });
     var svgs = []
-    h3s[1].nextElementSibling.querySelectorAll("li").forEach(li => {
+    h3s[2].nextElementSibling.querySelectorAll("li").forEach(li => {
         var svg = li.querySelector("svg");
         svg.setAttribute("style", "fill: #222222");
         if (svg) {
             svgs.push({
                 svg: svg.outerHTML,
-                width: 25,
-                height: 25
+                width: 20,
+                height: 20
             });
         }
     });
@@ -293,10 +299,10 @@ function getCurriculumVitae() {
     });
     content.push("\n\n");
     content.push({
-        text: clean(h3s[2].textContent).toUpperCase() + "\n\n",
+        text: clean(h3s[3].textContent).toUpperCase() + "\n\n",
         style: "h3"
     });
-    content.push(createSkillsListPDF(h3s[2].nextElementSibling, 15, 10));
+    content.push(createSkillsListPDF(h3s[3].nextElementSibling, 15, 10));
     //content.push("\n\n\n\n")
 
     /* Interests
@@ -318,30 +324,30 @@ function getCurriculumVitae() {
             producer: "Dario Curreri"
         },
         defaultStyle: {
-            fontSize: 11,
+            fontSize: 10,
             color: "#444444",
         },
         styles: {
             h1: {
-                fontSize: 36,
+                fontSize: 34,
                 bold: true,
                 color: "#222222",
                 lineHeight: 0.6
             },
             h2: {
-                fontSize: 28,
+                fontSize: 26,
                 bold: true,
                 color: "#222222",
                 lineHeight: 0.8
             },
             h3: {
-                fontSize: 20,
+                fontSize: 18,
                 bold: true,
                 color: "#222222",
                 lineHeight: 0.7
             },
             date: {
-                fontSize: 10,
+                fontSize: 9,
                 color: "#f59d62",
                 lineHeight: 0.7
             },
@@ -369,7 +375,7 @@ function getCurriculumVitae() {
         pageMargins: [40, 40, 40, 35],
         pageBreakBefore: function(currentNode) {
             return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.87) || 
-                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.69);
+                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.50);
         }
     };
 
@@ -525,15 +531,14 @@ function getResume() {
     h3s = skills.querySelectorAll("h3");
 
     columns[0].push({
-        text: clean(h3s[2].textContent).toUpperCase(),
+        text: clean(h3s[3].textContent).toUpperCase(),
         style: "h3"
     });
     columns[0].push({
         text: "\n",
         style: "titleDivisor"
     });
-    columns[0].push(createSkillsListPDF(h3s[2].nextElementSibling, 10, 8));
-
+    columns[0].push(createSkillsListPDF(h3s[3].nextElementSibling, 10, 8));
     columns[1].push({
         text: clean(h3s[0].textContent).toUpperCase(),
         style: "h3"
@@ -551,9 +556,22 @@ function getResume() {
         text: clean(h3s[1].textContent).toUpperCase(),
         style: "h3"
     });
+    columns[1].push({
+        text: "\n",
+        style: "titleDivisor"
+    });
+    columns[1].push(createSkillsListPDF(h3s[1].nextElementSibling, 10, 8));
+    columns[1].push({
+        text: "\n",
+        style: "sectionDivisor"
+    });
+    columns[1].push({
+        text: clean(h3s[2].textContent).toUpperCase(),
+        style: "h3"
+    });
     columns[1].push("\n");
     var svgs = []
-    h3s[1].nextElementSibling.querySelectorAll("li").forEach(li => {
+    h3s[2].nextElementSibling.querySelectorAll("li").forEach(li => {
         var svg = li.querySelector("svg");
         svg.setAttribute("style", "fill: #222222");
         if (svg) {
