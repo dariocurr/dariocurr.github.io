@@ -189,14 +189,6 @@ section#skills h3 {
     margin-bottom: 1rem;
 }
 
-span.fa-li {
-    padding-top: 0.05rem;
-}
-
-span.fa-li + * {
-    margin-left: 0.35rem;
-}
-
 #world-map {
     width: 720px;
     height: 360px;
@@ -233,5 +225,11 @@ span.fa-li + * {
         width: 17.5rem;
         height: 100vh;
         border-right: 1px solid #333;
+    }
+    span.fa-li {
+        padding-top: 0.05rem;
+    } 
+    span.fa-li + * {
+        margin-left: 0.35rem;
     }
 }
