@@ -237,7 +237,7 @@ function getCurriculumVitae() {
         content.push("\n\n");
     }
 
-    /* Publications 
+    // Publications 
     var publications = sections[4];
     content.push({
         text: clean(publications.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
@@ -248,7 +248,6 @@ function getCurriculumVitae() {
         margin: [10, 0]
     }]);
     content.push("\n\n\n\n");
-    */
 
     // Skills
     var skills = sections[3];
@@ -454,7 +453,6 @@ function getResume() {
         style: "sectionDivisor"
     });
 
-
     // Experience and Education
     columns = [[], []]
     for (var i= 1; i < 3; i++) {
@@ -495,7 +493,7 @@ function getResume() {
         });
     }
 
-    /* Publications 
+    // Publications 
     var publications = sections[4];
     columns[0].push({
         text: "\n",
@@ -509,7 +507,6 @@ function getResume() {
         ol: createSimpleListPDF(publications.querySelector("ol")),
         margin: [10, 0]
     }]);
-    */
 
     content.push({
         columns: columns,

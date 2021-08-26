@@ -107,7 +107,7 @@ function createMD() {
     md = md.substring(0, md.length - 1);
     md += "<br>\n\n";
 
-    /* Publications
+    // Publications
     var publications = sections[4];
     md += "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
     lis = publications.querySelectorAll("li");
@@ -115,7 +115,6 @@ function createMD() {
         md += (i + 1) + ". " + extractTextMD(lis[i]);
     }
     md += "\n<br>\n<br>\n<br>\n\n";
-    */
 
     // Interests
     var interests = sections[4];
