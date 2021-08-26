@@ -43,7 +43,7 @@ function extractLinkPDF(element) {
     var text = clean(element.innerHTML);
     element.querySelectorAll("a").forEach(a => {
         var index = text.indexOf("<");
-        dicts.push({text: clean(text.substring(0, index)) + " "});
+        dicts.push({ text: clean(text.substring(0, index)) + " " });
         dicts.push({
             text: clean(a.innerHTML),
             link: createLink(a.getAttribute("href")),
@@ -55,7 +55,7 @@ function extractLinkPDF(element) {
         }
     })
     if (text.length > 0) {
-        dicts.push({text: clean(text)});
+        dicts.push({ text: clean(text) });
     }
     return dicts;
 }
@@ -106,7 +106,7 @@ function createSkillsListPDF(ul, width, height) {
                 columnGap: 7
             });
         }
-        lis.push({text: "\n", style: "listDivisor"});
+        lis.push({ text: "\n", style: "listDivisor" });
     });
     return lis.slice(0, lis.length - 1);
 }
@@ -155,31 +155,31 @@ function getCurriculumVitae() {
                 height: 25
             });
         }
-    );
+        );
     content.push({
         columns: [{
-                image: "profile",
-                width: 150,
-                height: 150,
-                link: "https://dariocurr.github.io/"
+            image: "profile",
+            width: 150,
+            height: 150,
+            link: "https://dariocurr.github.io/"
+        }, {
+            text: "",
+            width: "12%"
+        }, {
+            stack: [{
+                text: dicts,
+                margin: [0, 11]
             }, {
-                text: "",
-                width: "12%"
+                columns: icons,
+                columnGap: (262 - icons.length * 25) / (icons.length - 1),
+                margin: [0, 15]
             }, {
-                stack: [{
-                    text: dicts,
-                    margin: [0, 11]
-                }, {
-                    columns: icons,
-                    columnGap: (262 - icons.length * 25) / (icons.length - 1),
-                    margin: [0, 15]
-                }, {
-                    text: "dariocurr.github.io",
-                    link: "dariocurr.github.io",
-                    style: ["link", "subheading"],
-                    margin: [0, 12]
-                }]
-            }
+                text: "dariocurr.github.io",
+                link: "dariocurr.github.io",
+                style: ["link", "subheading"],
+                margin: [0, 12]
+            }]
+        }
         ]
     }, "\n\n");
     content.push({
@@ -189,7 +189,7 @@ function getCurriculumVitae() {
     content.push("\n\n\n");
 
     // Experience and Education
-    for (var i= 1; i < 3; i++) {
+    for (var i = 1; i < 4; i += 2) {
         var section = sections[i]
         content.push({
             text: clean(section.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
@@ -238,7 +238,7 @@ function getCurriculumVitae() {
     }
 
     // Publications 
-    var publications = sections[4];
+    var publications = sections[2];
     content.push({
         text: clean(publications.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
         style: "h2"
@@ -250,7 +250,7 @@ function getCurriculumVitae() {
     content.push("\n\n\n\n");
 
     // Skills
-    var skills = sections[3];
+    var skills = sections[4];
     content.push({
         text: clean(skills.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
         style: "h2",
@@ -372,9 +372,9 @@ function getCurriculumVitae() {
         },
         compress: true,
         pageMargins: [40, 40, 40, 35],
-        pageBreakBefore: function(currentNode) {
-            return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.87) || 
-                    (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.50);
+        pageBreakBefore: function (currentNode) {
+            return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.87) ||
+                (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.50);
         }
     };
 
@@ -428,7 +428,7 @@ function getResume() {
                 height: 13
             });
         }
-    );
+        );
     content.push({
         columns: [{
             text: dicts,
@@ -455,7 +455,7 @@ function getResume() {
 
     // Experience and Education
     columns = [[], []]
-    for (var i= 1; i < 3; i++) {
+    for (var i = 1; i < 3; i += 2) {
         var section = sections[i]
         columns[i - 1].push({
             text: clean(section.querySelector("h2").innerHTML).toUpperCase(),
@@ -477,7 +477,8 @@ function getResume() {
                         text: clean(descriptionDiv.querySelector("span").innerHTML).toUpperCase().replaceAll("/", "\n"),
                         style: "subheading"
                     }
-                ]}, {
+                    ]
+                }, {
                     stack: dates,
                     alignment: "right",
                     width: maxLength * 1.85 + "%",
@@ -494,7 +495,7 @@ function getResume() {
     }
 
     // Publications 
-    var publications = sections[4];
+    var publications = sections[2];
     columns[0].push({
         text: "\n",
         style: "sectionDivisor"
@@ -519,7 +520,7 @@ function getResume() {
 
 
     // Skills
-    var skills = sections[3];
+    var skills = sections[4];
     content.push({
         text: clean(skills.querySelector("h2").innerHTML).toUpperCase(),
         style: "h2",
@@ -656,7 +657,7 @@ function getResume() {
             },
             headingDivisor: {
                 lineHeight: 0.25
-            }, 
+            },
             titleDivisor: {
                 lineHeight: 0.9
             },
