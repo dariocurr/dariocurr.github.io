@@ -454,10 +454,10 @@ function getResume() {
     });
 
     // Experience and Education
-    columns = [[], null, []]
+    columns = [[], []]
     for (var i = 1; i < 4; i += 2) {
         var section = sections[i]
-        columns[i - 1].push({
+        columns[Math.floor(i / 2)].push({
             text: clean(section.querySelector("h2").innerHTML).toUpperCase(),
             style: "h2"
         });
