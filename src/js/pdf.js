@@ -374,7 +374,7 @@ function getCurriculumVitae() {
         pageMargins: [40, 40, 40, 35],
         pageBreakBefore: function (currentNode) {
             return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.87) ||
-                (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.50);
+                (currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.55);
         }
     };
 
@@ -454,8 +454,8 @@ function getResume() {
     });
 
     // Experience and Education
-    columns = [[], []]
-    for (var i = 1; i < 3; i += 2) {
+    columns = [[], null, []]
+    for (var i = 1; i < 4; i += 2) {
         var section = sections[i]
         columns[i - 1].push({
             text: clean(section.querySelector("h2").innerHTML).toUpperCase(),
