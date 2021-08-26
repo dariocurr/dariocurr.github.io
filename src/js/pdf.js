@@ -43,7 +43,7 @@ function extractLinkPDF(element) {
     var text = clean(element.innerHTML);
     element.querySelectorAll("a").forEach(a => {
         var index = text.indexOf("<");
-        dicts.push({ text: clean(text.substring(0, index)) + " " });
+        dicts.push({text: clean(text.substring(0, index)) + " "});
         dicts.push({
             text: clean(a.innerHTML),
             link: createLink(a.getAttribute("href")),
@@ -58,6 +58,35 @@ function extractLinkPDF(element) {
         dicts.push({ text: clean(text) });
     }
     return dicts;
+}
+
+function createPublicationsListPDF(element) {
+    var lis = element.querySelectorAll("li");
+    var papers = [];
+    lis.forEach(li => {
+        var paragraph = li.querySelector("p");
+        var dicts = extractLinkPDF(paragraph);
+        var text = dicts.pop(2)["text"];
+        paragraph.querySelectorAll("em").forEach(em => {
+            var index = text.indexOf("<");
+            dicts.push({text: clean(text.substring(0, index)) + " "});
+            dicts.push({
+                text: clean(em.innerHTML),
+                style: ["italic"]
+            })
+            text = text.substring(index + clean(em.outerHTML).lastIndexOf(">") + 1);
+            if (!(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g.test(text[0]))) {
+                dicts.push(" ");
+            }
+        })
+        if (text.length > 0) {
+            dicts.push({ text: clean(text) });
+        }
+        papers.push({
+            text: dicts
+        });
+    })
+    return papers;
 }
 
 function createSkillsListPDF(ul, width, height) {
@@ -244,8 +273,8 @@ function getCurriculumVitae() {
         style: "h2"
     });
     content.push([{
-        ol: createSimpleListPDF(publications.querySelector("ol")),
-        margin: [10, 0]
+        ol: createPublicationsListPDF(publications.querySelector("ol")),
+        margin: [7.5, 0]
     }]);
     content.push("\n\n\n\n");
 
@@ -344,6 +373,9 @@ function getCurriculumVitae() {
                 bold: true,
                 color: "#222222",
                 lineHeight: 0.7
+            },
+            italic: {
+                italics: true
             },
             date: {
                 fontSize: 9,
@@ -457,7 +489,8 @@ function getResume() {
     columns = [[], []]
     for (var i = 1; i < 4; i += 2) {
         var section = sections[i]
-        columns[Math.floor(i / 2)].push({
+        var listIndex = Math.floor(i / 2)
+        columns[listIndex].push({
             text: clean(section.querySelector("h2").innerHTML).toUpperCase(),
             style: "h2"
         });
@@ -465,7 +498,7 @@ function getResume() {
             var descriptionDiv = article.firstElementChild;
             var dates = descriptionDiv.nextElementSibling.querySelector("span").innerHTML.split(" - ").map(date => clean(date));
             var maxLength = Math.max.apply(Math, dates.map(date => date.length));
-            columns[i - 1].push({
+            columns[listIndex].push({
                 columns: [{
                     stack: [{
                         text: clean(descriptionDiv.querySelector("h3").innerHTML).toUpperCase().replaceAll("/", "\n"),
@@ -487,7 +520,7 @@ function getResume() {
                 }],
                 columnGap: 15
             });
-            columns[i - 1].push({
+            columns[listIndex].push({
                 text: "\n",
                 style: "divisor"
             });
@@ -505,8 +538,8 @@ function getResume() {
         style: "h2"
     });
     columns[0].push([{
-        ol: createSimpleListPDF(publications.querySelector("ol")),
-        margin: [10, 0]
+        ol: createPublicationsListPDF(publications.querySelector("ol")),
+        margin: [5, 0]
     }]);
 
     content.push({
@@ -629,6 +662,9 @@ function getResume() {
                 bold: true,
                 color: "#222222",
                 lineHeight: 0.7
+            },
+            italic: {
+                italics: true
             },
             subtitle: {
                 fontSize: 11.8,

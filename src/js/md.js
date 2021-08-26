@@ -56,7 +56,7 @@ function createMD() {
     md += "\n<br>\n<br>\n<br>\n\n";
 
     // Experience and Education
-    for (var i= 1; i < 3; i++) {
+    for (var i = 1; i < 4; i +=2) {
         var section = sections[i]
         md += "## " + clean(section.querySelector("h2").textContent) + "\n<br>\n\n";
         section.querySelectorAll("article").forEach(article => {
@@ -74,8 +74,17 @@ function createMD() {
         md += "<br>\n\n";
     }
 
+    // Publications
+    var publications = sections[2];
+    md += "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
+    lis = publications.querySelectorAll("li");
+    for(var i = 0; i < lis.length; i++) {
+        md += (i + 1) + ". " + extractTextMD(lis[i]);
+    }
+    md += "\n<br>\n<br>\n<br>\n\n";
+
     // Skills
-    var skills = sections[3];
+    var skills = sections[4];
     md += "## " + clean(skills.querySelector("h2").textContent) + "\n<br>\n\n";
     skills.querySelectorAll("h3").forEach(h3 => {
         md += "### " + clean(h3.textContent) + "\n<br>\n\n";
@@ -107,17 +116,8 @@ function createMD() {
     md = md.substring(0, md.length - 1);
     md += "<br>\n\n";
 
-    // Publications
-    var publications = sections[4];
-    md += "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
-    lis = publications.querySelectorAll("li");
-    for(var i = 0; i < lis.length; i++) {
-        md += (i + 1) + ". " + extractTextMD(lis[i]);
-    }
-    md += "\n<br>\n<br>\n<br>\n\n";
-
     // Interests
-    var interests = sections[4];
+    var interests = sections[5];
     md += "## " + clean(interests.querySelector("h2").textContent) + "\n<br>\n\n";
     md += clean(interests.querySelector("p").textContent);
     
