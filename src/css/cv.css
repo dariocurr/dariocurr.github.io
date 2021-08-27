@@ -41,6 +41,10 @@ section {
     min-height: 105vh;
 }
 
+section#skills div ul li p {
+    margin-bottom: 0.3rem;
+}
+
 nav {
     font-weight: 800;
     letter-spacing: 0.1rem;
