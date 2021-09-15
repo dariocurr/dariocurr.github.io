@@ -456,8 +456,8 @@ function getResume() {
             svg.setAttribute("style", "fill: #222222");
             icons.push({
                 svg: svg.outerHTML,
-                width: 13,
-                height: 13
+                width: 12,
+                height: 12
             });
         }
         );
@@ -467,9 +467,9 @@ function getResume() {
             width: "80%"
         }, {
             columns: icons,
-            columnGap: 16.75,
+            columnGap: 10.8,
             width: "20%",
-            margin: [0, 2.9]
+            margin: [0, 3.8]
         }],
     });
     content.push({
