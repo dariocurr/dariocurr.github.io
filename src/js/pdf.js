@@ -1,5 +1,6 @@
 var loaded = false;
 
+
 function pdf(shrinked) {
 	if (loaded) {
 		if (shrinked) {
