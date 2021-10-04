@@ -60,6 +60,57 @@ function extractLinkPDF(element) {
     return dicts;
 }
 
+
+function createExperienceAndEducationListCurriculumPDF(section) {
+    content = [];
+    content.push({
+        text: clean(section.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
+        style: "h2"
+    });
+    section.querySelectorAll("article").forEach(article => {
+        var descriptionDiv = article.firstElementChild;
+        var date = descriptionDiv.nextElementSibling.querySelector("span").innerHTML;
+        content.push({
+            columns: [{
+                text: clean(descriptionDiv.querySelector("h3").innerHTML).toUpperCase(),
+                style: "h3"
+            }, {
+                text: clean(date),
+                alignment: "right",
+                width: date.length * 1.20 + "%",
+                margin: [0, 7.5],
+                style: "date"
+            }]
+        });
+        content.push({
+            text: clean(descriptionDiv.querySelector("span").innerHTML).toUpperCase(),
+            style: "subheading"
+        });
+        article.querySelectorAll("p").forEach(p => {
+            content.push({
+                text: extractTextPDF(p),
+                style: "description"
+            });
+            content.push({
+                text: "\n",
+                style: "listDivisor"
+            });
+        });
+        content.pop();
+        var ul = article.querySelector("ul");
+        if (ul) {
+            content.push([{
+                ul: createSimpleListPDF(ul),
+                margin: [10, 0]
+            }]);
+        }
+        content.push("\n\n");
+    });
+    content.push("\n\n");
+    return content;
+}
+
+
 function createPublicationsListPDF(element) {
     var lis = element.querySelectorAll("li");
     var papers = [];
@@ -88,6 +139,7 @@ function createPublicationsListPDF(element) {
     })
     return papers;
 }
+
 
 function createSkillsListPDF(ul, width, height) {
     var lis = [];
@@ -139,6 +191,7 @@ function createSkillsListPDF(ul, width, height) {
     });
     return lis.slice(0, lis.length - 1);
 }
+
 
 function createSimpleListPDF(tag) {
     var list = []
@@ -217,54 +270,8 @@ function getCurriculumVitae() {
     });
     content.push("\n\n\n");
 
-    // Experience and Education
-    for (var i = 1; i < 4; i += 2) {
-        var section = sections[i]
-        content.push({
-            text: clean(section.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
-            style: "h2"
-        });
-        section.querySelectorAll("article").forEach(article => {
-            var descriptionDiv = article.firstElementChild;
-            var date = descriptionDiv.nextElementSibling.querySelector("span").innerHTML;
-            content.push({
-                columns: [{
-                    text: clean(descriptionDiv.querySelector("h3").innerHTML).toUpperCase(),
-                    style: "h3"
-                }, {
-                    text: clean(date),
-                    alignment: "right",
-                    width: date.length * 1.20 + "%",
-                    margin: [0, 7.5],
-                    style: "date"
-                }]
-            });
-            content.push({
-                text: clean(descriptionDiv.querySelector("span").innerHTML).toUpperCase(),
-                style: "subheading"
-            });
-            article.querySelectorAll("p").forEach(p => {
-                content.push({
-                    text: extractTextPDF(p),
-                    style: "description"
-                });
-                content.push({
-                    text: "\n",
-                    style: "listDivisor"
-                });
-            });
-            content.pop();
-            var ul = article.querySelector("ul");
-            if (ul) {
-                content.push([{
-                    ul: createSimpleListPDF(ul),
-                    margin: [10, 0]
-                }]);
-            }
-            content.push("\n\n");
-        });
-        content.push("\n\n");
-    }
+    // Experience
+    content.concat(createExperienceAndEducationListCurriculumPDF(sections[1]));
 
     // Publications 
     var publications = sections[2];
@@ -277,6 +284,9 @@ function getCurriculumVitae() {
         margin: [7.5, 0]
     }]);
     content.push("\n\n\n\n");
+
+    // Education
+    content.concat(createExperienceAndEducationListCurriculumPDF(sections[3]));
 
     // Skills
     var skills = sections[4];
