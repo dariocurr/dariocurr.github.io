@@ -47,29 +47,32 @@ section#skills div ul li p {
 }
 
 nav {
-	font-weight: 800;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
 	justify-content: center !important;
 }
 
-nav li {
+nav div#navbar-list {
+	font-weight: 800;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+
+nav div#navbar-list li {
 	display: block;
 }
 
-nav a {
+nav div#navbar-list a {
 	color: #aaa;
 }
 
-nav a:hover {
+nav div#navbar-list a:hover {
 	color: #ddd;
 }
 
-nav a.active {
+nav div#navbar-list a.active {
 	color: #fff;
 }
 
-nav button {
+nav div#navbar-list button {
 	border-color: #555;
 }
 
@@ -129,6 +132,10 @@ article:not(:last-child) {
 
 .mb-6 {
 	margin-bottom: 4rem !important;
+}
+
+.mt-10 {
+	margin-top: 10rem !important;
 }
 
 .text-primary {
@@ -217,6 +224,14 @@ section#skills h3 {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+	a#repo-icon {
+		font-size: 1.25rem;
+	}
+	a#repo-link {
+		font-size: 0.9rem;
+		position: relative;
+		bottom: 0.14rem;
+	}
 }
 
 @media (min-width: 992px) {
@@ -242,5 +257,16 @@ section#skills h3 {
 	}
 	span.fa-li + * {
 		margin-left: 0.35rem;
+	}
+	div#repo {
+		position: absolute;
+		bottom: 2rem;
+	}
+	a#repo-icon {
+		font-size: 1.55rem;
+	}
+	a#repo-link {
+		position: relative;
+		bottom: 0.2245rem;
 	}
 }
