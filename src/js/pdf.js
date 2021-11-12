@@ -11,9 +11,9 @@ function pdf(shrinked) {
 		console.log("PDF file generated!");
 	} else {
 		$.when(
-			$.getScript("https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"),
-			$.getScript("src/js/assets.js"),
-			$.getScript("src/js/utils.js"),
+			// $.getScript("https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"),
+			// $.getScript("src/js/assets.js"),
+			// $.getScript("src/js/utils.js"),
 			$.Deferred(deferred => $(deferred.resolve))
 		).done(() => {
 			loaded = true;
@@ -254,8 +254,8 @@ function getCurriculumVitae() {
 				margin: [0, 11]
 			}, {
 				columns: icons,
-				columnGap: (262 - icons.length * 25) / (icons.length - 1),
-				margin: [0, 15]
+				columnGap: (261 - icons.length * 25) / (icons.length - 1),
+				margin: [2, 15]
 			}, {
 				text: "dariocurr.github.io",
 				link: "dariocurr.github.io",
@@ -478,7 +478,7 @@ function getResume() {
 			width: "80%"
 		}, {
 			columns: icons,
-			columnGap: 10.8,
+			columnGap: 17,
 			width: "20%",
 			margin: [0, 3.8]
 		}],
