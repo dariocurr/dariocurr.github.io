@@ -15,75 +15,81 @@ var map = AmCharts.makeChart("world-map", {
     backgroundColor: "#121212",
     backgroundAlpha: 1,
     zoomControl: {
-        zoomControlEnabled: true
+        zoomControlEnabled: true,
     },
     dataProvider: {
         map: "worldHigh",
         getAreasFromMap: true,
         areas: [{
                 "id": "BE",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "HR",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "CZ",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "FR",
-                "showAsSelected": true
+                "showAsSelected": true,
             },{
                 "id": "GR",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "HU",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "IT",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "LU",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "MC",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "NL",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "NO",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "PL",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "SM",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "SK",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "SI",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "TR",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "GB",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "VA",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "AT",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "ES",
-                "showAsSelected": true
+                "showAsSelected": true,
             }, {
                 "id": "DK",
-                "showAsSelected": true
-            }
+                "showAsSelected": true,
+            }, {
+                "id": "BG",
+                "showAsSelected": true,
+            }, {
+                "id": "RO",
+                "showAsSelected": true,
+            },
         ]
     },
     areasSettings: {
@@ -93,6 +99,6 @@ var map = AmCharts.makeChart("world-map", {
         colorSolid: "#f59d62",
         selectedColor: "#f59d62",
         rollOverColor: "#f57218",
-        rollOverOutlineColor: "#333"
-    }
+        rollOverOutlineColor: "#333",
+    },
 });
