@@ -1,5 +1,5 @@
 function clean(string) {
-    return string.replace(/\s+/g, " ").replaceAll("<br> ", "\n").trim();
+    return $('<textarea/>').html(string).text().replace(/\s+/g, " ").replaceAll("<br> ", "\n").trim();
 }
 
 function createLink(link) {

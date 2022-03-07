@@ -11,9 +11,9 @@ function pdf(shrinked) {
 		console.log("PDF file generated!");
 	} else {
 		$.when(
-			// $.getScript("https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"),
-			// $.getScript("src/js/assets.js"),
-			// $.getScript("src/js/utils.js"),
+			$.getScript("https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"),
+			$.getScript("src/js/assets.js"),
+			$.getScript("src/js/utils.js"),
 			$.Deferred(deferred => $(deferred.resolve))
 		).done(() => {
 			loaded = true;
@@ -46,7 +46,7 @@ function extractLinkPDF(element) {
 		var index = text.indexOf("<");
 		dicts.push({ text: clean(text.substring(0, index)) + " " });
 		dicts.push({
-			text: clean(a.innerHTML),
+			text: clean(a.textContent),
 			link: createLink(a.getAttribute("href")),
 			style: ["link"]
 		})
@@ -380,10 +380,10 @@ function getCurriculumVitae() {
 				lineHeight: 0.8
 			},
 			h3: {
-				fontSize: 18,
+				fontSize: 17.5,
 				bold: true,
 				color: "#222222",
-				lineHeight: 0.7
+				lineHeight: 0.6
 			},
 			italic: {
 				italics: true
@@ -391,10 +391,10 @@ function getCurriculumVitae() {
 			date: {
 				fontSize: 9,
 				color: "#f59d62",
-				lineHeight: 0.7
+				lineHeight: 0.6
 			},
 			subheading: {
-				fontSize: 18,
+				fontSize: 17,
 				bold: true,
 			},
 			link: {
@@ -417,7 +417,9 @@ function getCurriculumVitae() {
 		pageMargins: [40, 40, 40, 35],
 		pageBreakBefore: function (currentNode) {
 			return ("columns" in currentNode && currentNode["startPosition"]["verticalRatio"] > 0.87) ||
-				(currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.55);
+				(currentNode["style"] == "h2" && currentNode["startPosition"]["verticalRatio"] > 0.55) ||
+				(currentNode["style"] == "h3" && currentNode["startPosition"]["verticalRatio"] > 0.8) ||
+				(currentNode["style"] == "date" && currentNode["startPosition"]["verticalRatio"] > 0.8);
 		}
 	};
 
@@ -703,7 +705,7 @@ function getResume() {
 				lineHeight: 2
 			},
 			headingDivisor: {
-				lineHeight: 0.25
+				lineHeight: 0.15
 			},
 			titleDivisor: {
 				lineHeight: 0.9
