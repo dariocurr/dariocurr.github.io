@@ -152,6 +152,7 @@ function createSkillsListPDF(ul, width, height) {
 			text["margin"] = [0, - ((0.8 * height) - 4.75)];
 			var dots = []
 			li.querySelectorAll("svg.fa-circle").forEach(svg => {
+				svg = svg.cloneNode(true);
 				svg.setAttribute("style", "fill: #444444");
 				dots.push({
 					svg: svg.outerHTML,
@@ -213,7 +214,7 @@ function getCurriculumVitae() {
 	var icons = []
 	Array.from(about.querySelectorAll(".social-icon"))
 		.forEach(socialIcon => {
-			var svg = socialIcon.querySelector("svg");
+			var svg = socialIcon.querySelector("svg").cloneNode(true);
 			svg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
 			var a = document.createElement("a");
 			a.setAttribute("xlink:href", socialIcon.getAttribute("href"));
@@ -303,7 +304,7 @@ function getCurriculumVitae() {
 	});
 	var svgs = []
 	h3s[2].nextElementSibling.querySelectorAll("li").forEach(li => {
-		var svg = li.querySelector("svg");
+		var svg = li.querySelector("svg").cloneNode(true);
 		svg.setAttribute("style", "fill: #222222");
 		if (svg) {
 			svgs.push({
@@ -448,7 +449,7 @@ function getResume() {
 	var icons = []
 	Array.from(about.querySelectorAll(".social-icon"))
 		.forEach(socialIcon => {
-			var svg = socialIcon.querySelector("svg");
+			var svg = socialIcon.querySelector("svg").cloneNode(true);
 			svg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
 			var a = document.createElement("a");
 			a.setAttribute("xlink:href", socialIcon.getAttribute("href"));
@@ -605,7 +606,7 @@ function getResume() {
 	columns[1].push("\n");
 	var svgs = []
 	h3s[2].nextElementSibling.querySelectorAll("li").forEach(li => {
-		var svg = li.querySelector("svg");
+		var svg = li.querySelector("svg").cloneNode(true);
 		svg.setAttribute("style", "fill: #222222");
 		if (svg) {
 			svgs.push({
