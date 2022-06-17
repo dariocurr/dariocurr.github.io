@@ -1,32 +1,21 @@
-var loaded = false;
-
+var loaded = false
 
 function pdf(shrinked) {
-	if (loaded) {
-		if (shrinked) {
-			pdfMake.createPdf(getResume()).download("Dario Curreri's Resume.pdf");
-		} else {
-			pdfMake.createPdf(getCurriculumVitae()).download("Dario Curreri's Curriculum Vitae.pdf");
+	if (!loaded) {
+		pdfMake.fonts = {
+			Roboto: {
+				normal: 'Muli-Regular.ttf',
+				bold: 'SairaExtraCondensed-SemiBold.ttf',
+				italics: 'Muli-Italic.ttf',
+			}
 		}
-		console.log("PDF file generated!");
-	} else {
-		$.when(
-			$.getScript("https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"),
-			$.getScript("src/js/assets.js"),
-			$.getScript("src/js/utils.js"),
-			$.Deferred(deferred => $(deferred.resolve))
-		).done(() => {
-			loaded = true;
-			pdfMake.fonts = {
-				Roboto: {
-					normal: 'Muli-Regular.ttf',
-					bold: 'SairaExtraCondensed-SemiBold.ttf',
-					italics: 'Muli-Italic.ttf',
-				}
-			};
-			pdf(shrinked);
-		})
 	}
+	if (shrinked) {
+		pdfMake.createPdf(getResume()).download("Dario Curreri's Resume.pdf");
+	} else {
+		pdfMake.createPdf(getCurriculumVitae()).download("Dario Curreri's Curriculum Vitae.pdf");
+	}
+	console.log("PDF file generated!");
 }
 
 

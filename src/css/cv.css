@@ -130,6 +130,10 @@ article:not(:last-child) {
 	margin-bottom: 4.5rem;
 }
 
+p {
+	text-align: justify;
+}
+
 .mb-6 {
 	margin-bottom: 4rem !important;
 }
@@ -140,6 +144,22 @@ article:not(:last-child) {
 
 .text-primary {
 	color: #f59d62 !important;
+}
+
+.btn {
+	color: #f59d62;
+	border-color: #f59d62;
+	transition: all 0.15s ease-in;
+}
+
+.btn:hover {
+	color: #fff;
+	background-color: #f59d62;
+	transform: scale(1.075) perspective(1px)
+}
+
+.btn:focus {
+	box-shadow: 0 0 0 0;
 }
 
 .lead {
@@ -167,6 +187,7 @@ article:not(:last-child) {
 	color: #eee;
 	border-radius: 100%;
 	font-size: 1.5rem;
+	transition: all 0.15s ease-in;
 }
 
 .social-icon:not(:first-child) {
@@ -176,6 +197,7 @@ article:not(:last-child) {
 .social-icon:hover {
 	background-color: #f59d62;
 	color: #fff;
+	transform: scale(1.075) perspective(1px)
 }
 
 .nav-icon {
@@ -220,13 +242,16 @@ section#skills h3 {
 		padding-right: 1.25rem;
 		justify-content: space-between !important;
 	}
+
 	section {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+
 	a#repo-icon {
 		font-size: 1.25rem;
 	}
+
 	a#repo-link {
 		font-size: 0.9rem;
 		position: relative;
@@ -238,9 +263,11 @@ section#skills h3 {
 	body {
 		padding-left: 17.5rem;
 	}
+
 	section {
 		padding-right: 3rem;
 	}
+
 	nav {
 		text-align: center;
 		position: fixed;
@@ -252,19 +279,24 @@ section#skills h3 {
 		height: 100vh;
 		border-right: 1px solid #333;
 	}
+
 	span.fa-li {
 		padding-top: 0.05rem;
 	}
-	span.fa-li + * {
+
+	span.fa-li+* {
 		margin-left: 0.35rem;
 	}
-	div#repo {
+
+	div#nav-bottom {
 		position: absolute;
 		bottom: 2rem;
 	}
+
 	a#repo-icon {
 		font-size: 1.55rem;
 	}
+
 	a#repo-link {
 		position: relative;
 		bottom: 0.2245rem;
