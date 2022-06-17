@@ -264,6 +264,14 @@ section#skills h3 {
 		padding-left: 17.5rem;
 	}
 
+	button {
+		transition: none;
+	}
+
+	button:hover {
+		transform: none;
+	}
+
 	section {
 		padding-right: 3rem;
 	}
