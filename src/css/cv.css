@@ -47,10 +47,6 @@ section#skills div ul li p {
 	margin-bottom: 0.3rem;
 }
 
-nav {
-	justify-content: center !important;
-}
-
 nav div#navbar-list {
 	font-weight: 800;
 	letter-spacing: 0.1rem;
@@ -295,6 +291,7 @@ section#skills h3 {
 		width: 17.5rem;
 		height: 100vh;
 		border-right: 1px solid #333;
+		justify-content: center !important;
 	}
 
 	span.fa-li {
