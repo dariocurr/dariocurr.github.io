@@ -130,6 +130,20 @@ article:not(:last-child) {
 	margin-bottom: 4.5rem;
 }
 
+button {
+	color: #f59d62 !important;
+	border-color: #f59d62 !important;
+}
+
+button:hover {
+	color: #fff !important;
+	background-color: #f59d62 !important;
+}
+
+button:focus {
+	box-shadow: 0 0 0 0 !important;
+}
+
 p {
 	text-align: justify;
 }
@@ -144,22 +158,6 @@ p {
 
 .text-primary {
 	color: #f59d62 !important;
-}
-
-.btn {
-	color: #f59d62;
-	border-color: #f59d62;
-	transition: all 0.15s ease-in;
-}
-
-.btn:hover {
-	color: #fff;
-	background-color: #f59d62;
-	transform: scale(1.075) perspective(1px)
-}
-
-.btn:focus {
-	box-shadow: 0 0 0 0;
 }
 
 .lead {
@@ -243,6 +241,14 @@ section#skills h3 {
 		justify-content: space-between !important;
 	}
 
+	button {
+		transition: none !important;
+	}
+
+	button:hover {
+		transform: none !important;
+	}
+
 	section {
 		padding-left: 1rem;
 		padding-right: 1rem;
@@ -257,6 +263,7 @@ section#skills h3 {
 		position: relative;
 		bottom: 0.14rem;
 	}
+
 }
 
 @media (min-width: 992px) {
@@ -264,16 +271,16 @@ section#skills h3 {
 		padding-left: 17.5rem;
 	}
 
+	section {
+		padding-right: 3rem;
+	}
+
 	button {
-		transition: none;
+		transition: all 0.15s ease-in;
 	}
 
 	button:hover {
-		transform: none;
-	}
-
-	section {
-		padding-right: 3rem;
+		transform: scale(1.075) perspective(1px);
 	}
 
 	nav {
