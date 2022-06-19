@@ -28,6 +28,7 @@ body {
 	font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 0.9rem !important;
 	background-color: #121212;
 	color: #aaa;
 }
@@ -133,6 +134,7 @@ article:not(:last-child) {
 button {
 	color: #f59d62 !important;
 	border-color: #f59d62 !important;
+	font-size: 0.9rem !important;
 }
 
 button:hover {
