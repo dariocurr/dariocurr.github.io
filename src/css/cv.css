@@ -47,29 +47,29 @@ section#skills div ul li p {
 	margin-bottom: 0.3rem;
 }
 
-nav div#navbar-list {
+#navbar-list {
 	font-weight: 800;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 }
 
-nav div#navbar-list li {
+#navbar-list li {
 	display: block;
 }
 
-nav div#navbar-list a {
+#navbar-list a {
 	color: #aaa;
 }
 
-nav div#navbar-list a:hover {
+#navbar-list a:hover {
 	color: #ddd;
 }
 
-nav div#navbar-list a.active {
+#navbar-list a.active {
 	color: #fff;
 }
 
-nav div#navbar-list button {
+#navbar-list button {
 	border-color: #555;
 }
 
@@ -252,11 +252,11 @@ section#skills h3 {
 		padding-right: 1rem;
 	}
 
-	a#repo-icon {
+	#repo-icon {
 		font-size: 1.25rem;
 	}
 
-	a#repo-link {
+	#repo-link {
 		font-size: 0.9rem;
 		position: relative;
 		bottom: 0.14rem;
@@ -302,16 +302,16 @@ section#skills h3 {
 		margin-left: 0.35rem;
 	}
 
-	div#nav-bottom {
+	#nav-bottom {
 		position: absolute;
 		bottom: 2rem;
 	}
 
-	a#repo-icon {
+	#repo-icon {
 		font-size: 1.55rem;
 	}
 
-	a#repo-link {
+	#repo-link {
 		position: relative;
 		bottom: 0.2245rem;
 	}
