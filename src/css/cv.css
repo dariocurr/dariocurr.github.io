@@ -214,8 +214,9 @@ ul.languages li {
 	padding-top: 0.35rem;
 }
 
-ul.tools li {
+ul#tools li {
 	padding-top: 0.5rem;
+	display: inline-block;
 }
 
 ul.workflow li {
