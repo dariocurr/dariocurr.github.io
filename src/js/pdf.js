@@ -1,4 +1,4 @@
-import pdfMake from "pdfmake/build/pdfmake";
+import pdfMake from "pdfmake/build/pdfmake.js";
 
 import { fonts, profile } from "./assets.js";
 import { clean, createLink } from "./utils.js";
