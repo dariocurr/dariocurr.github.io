@@ -1,46 +1,6 @@
-var loaded = false;
+import { clean, createLink } from "./utils.js";
 
-function md() {
-    if (loaded) {
-        createMD();
-    } else {
-        return $.getScript("src/js/utils.js", () => {
-            loaded = true;
-            createMD();
-        });
-    }
-}
-
-function extractTextMD(element) {
-    if (element.querySelector("a")) {
-        return extractLinkMD(element);
-    } else {
-        return clean(element.textContent);
-    }
-}
-
-function extractLinkMD(element) {
-    var md = "";
-    var text = clean(element.innerHTML);
-    element.querySelectorAll("a").forEach(a => {
-        var index = text.indexOf("<");
-        md += clean(text.substring(0, index)) + " ";
-        md += createLinkMD(a);
-        text = text.substring(index + clean(a.outerHTML).lastIndexOf(">") + 1);
-        if (!(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g.test(text[0]))) {
-            md += " ";
-        }
-    })
-    md += clean(text);
-    return md;
-}
-
-function createLinkMD(element) {
-    return "[" + clean(element.innerHTML) + "](" + createLink(element.getAttribute("href")) + ")";
-}
-
-
-function createMD() {
+window.md = function () {
 
     var md = "";
     var sections = document.querySelectorAll("section");
@@ -56,7 +16,7 @@ function createMD() {
     md += "\n<br>\n<br>\n<br>\n\n";
 
     // Experience and Education
-    for (var i = 1; i < 4; i +=2) {
+    for (var i = 1; i < 4; i += 2) {
         var section = sections[i]
         md += "## " + clean(section.querySelector("h2").textContent) + "\n<br>\n\n";
         section.querySelectorAll("article").forEach(article => {
@@ -78,7 +38,7 @@ function createMD() {
     var publications = sections[2];
     md += "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
     lis = publications.querySelectorAll("li");
-    for(var i = 0; i < lis.length; i++) {
+    for (var i = 0; i < lis.length; i++) {
         md += (i + 1) + ". " + extractTextMD(lis[i]);
     }
     md += "\n<br>\n<br>\n<br>\n\n";
@@ -120,6 +80,35 @@ function createMD() {
     var interests = sections[5];
     md += "## " + clean(interests.querySelector("h2").textContent) + "\n<br>\n\n";
     md += clean(interests.querySelector("p").textContent);
-    
+
     console.log(md);
+}
+
+
+function extractTextMD(element) {
+    if (element.querySelector("a")) {
+        return extractLinkMD(element);
+    } else {
+        return clean(element.textContent);
+    }
+}
+
+function extractLinkMD(element) {
+    var md = "";
+    var text = clean(element.innerHTML);
+    element.querySelectorAll("a").forEach(a => {
+        var index = text.indexOf("<");
+        md += clean(text.substring(0, index)) + " ";
+        md += createLinkMD(a);
+        text = text.substring(index + clean(a.outerHTML).lastIndexOf(">") + 1);
+        if (!(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g.test(text[0]))) {
+            md += " ";
+        }
+    })
+    md += clean(text);
+    return md;
+}
+
+function createLinkMD(element) {
+    return "[" + clean(element.innerHTML) + "](" + createLink(element.getAttribute("href")) + ")";
 }
