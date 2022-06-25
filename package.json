@@ -4,5 +4,8 @@
 	},
 	"devDependencies": {
 		"jest": "latest"
+	},
+	"dependencies": {
+		"pdfmake": "latest"
 	}
 }
