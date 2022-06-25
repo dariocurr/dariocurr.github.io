@@ -173,6 +173,12 @@ p {
 	font-weight: 500;
 }
 
+.icons {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(auto-fill, 4rem);
+}
+
 .social-icon {
 	display: inline-flex;
 	align-items: center;
@@ -186,10 +192,6 @@ p {
 	transition: all 0.15s ease-in;
 }
 
-.social-icon:not(:first-child) {
-	margin-left: 1.75rem;
-}
-
 .social-icon:hover {
 	background-color: #f59d62;
 	color: #fff;
@@ -200,21 +202,24 @@ p {
 	color: #eee;
 }
 
-.list-inline {
-	margin-left: 0.75rem;
-}
-
-ul.list-inline {
+ul.nav-sections li {
 	padding-top: 0.25rem;
 }
 
-ul .list-inline-item:not(:first-child) {
-	margin-left: 1rem;
-	margin-top: 0;
+ul.certifications li {
+	padding-top: 0.5rem;
 }
 
-li:not(:first-child) {
-	padding-top: 0.25rem;
+ul.languages li {
+	padding-top: 0.35rem;
+}
+
+ul.tools li {
+	padding-top: 0.5rem;
+}
+
+ul.workflow li {
+	padding-top: 0.35rem;
 }
 
 section#skills ul:not(:last-child) {
@@ -283,10 +288,6 @@ section#skills h3 {
 
 	nav {
 		text-align: center;
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: flex;
 		flex-direction: column;
 		width: 17.5rem;
 		height: 100vh;
