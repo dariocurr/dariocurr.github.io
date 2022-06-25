@@ -7,7 +7,7 @@ var loaded = false;
 
 window.pdf = function (shrinked) {
 	if (!loaded) {
-		this.pdfMake.vfs = fonts;
+		pdfMake.vfs = fonts;
 		pdfMake.fonts = {
 			Roboto: {
 				normal: "Muli-Regular.ttf",
