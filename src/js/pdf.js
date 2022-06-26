@@ -1,5 +1,3 @@
-import pdfMake from "pdfmake/build/pdfmake";
-
 import { fonts, profile } from "./assets.js";
 import { clean, createLink } from "./utils.js";
 
@@ -522,7 +520,7 @@ function getResume() {
 	});
 
 	// Experience and Education
-	columns = [[], []];
+	var columns = [[], []];
 	for (var i = 1; i < 4; i += 2) {
 		var section = sections[i];
 		var listIndex = Math.floor(i / 2);
@@ -611,8 +609,8 @@ function getResume() {
 		text: clean(skills.querySelector("h2").innerHTML).toUpperCase(),
 		style: "h2",
 	});
-	columns = [[], []];
-	h3s = skills.querySelectorAll("h3");
+	var columns = [[], []];
+	var h3s = skills.querySelectorAll("h3");
 
 	columns[0].push({
 		text: clean(h3s[3].textContent).toUpperCase(),
