@@ -1,8 +1,11 @@
 {
+	"name": "dariocurr.github.io",
+	"version": "0.0.1",
 	"scripts": {
 		"test": "jest"
 	},
 	"devDependencies": {
+		"@babel/plugin-transform-modules-commonjs": "latest",
 		"jest": "latest"
 	}
 }

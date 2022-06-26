@@ -1,5 +1,5 @@
-export function clean(string) {
-    return string.replace(/\s+/g, " ").replaceAll("<br>", "\n").trim();
+export function clean(str) {
+    return str.replaceAll(/\s+/g, " ").trim().replaceAll("<br>", "\n");
 }
 
 export function createLink(link) {
