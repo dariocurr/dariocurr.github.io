@@ -3,7 +3,8 @@ import { clean, createLink } from "./utils.js";
 
 var loaded = false;
 
-window.pdf = function (shrinked) {
+window.pdf = pdf
+export function pdf(shrinked) {
 	if (!loaded) {
 		pdfMake.vfs = fonts;
 		pdfMake.fonts = {

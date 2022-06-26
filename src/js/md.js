@@ -1,6 +1,7 @@
 import { clean, createLink } from "./utils.js";
 
-window.md = function () {
+window.md = md
+export function md() {
 
     var md = "";
     var sections = document.querySelectorAll("section");

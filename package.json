@@ -1,11 +1,16 @@
 {
 	"name": "dariocurr.github.io",
 	"version": "0.0.1",
+	"type": "module",
 	"scripts": {
-		"test": "jest"
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
 	},
 	"devDependencies": {
-		"@babel/plugin-transform-modules-commonjs": "latest",
-		"jest": "latest"
+		"jest": "latest",
+		"jest-environment-jsdom": "latest"
+	},
+	"jest": {
+		"verbose": true,
+		"testEnvironment": "jsdom"
 	}
 }
