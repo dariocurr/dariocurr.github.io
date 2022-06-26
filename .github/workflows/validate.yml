@@ -24,3 +24,12 @@ jobs:
           paths: junit.xml 
           show: all
         if: always()
+
+      - name: Merge `develop` in `main` branch
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: develop
+          target_branch: main
+          github_token: ${{ github.token }}
+          message: Merging `develop` into `main` using Github Actions
