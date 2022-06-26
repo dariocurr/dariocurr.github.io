@@ -1,0 +1,23 @@
+name: "Validate"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Run tests
+        run: npm test
+
+      - name: Show tests summary
+        uses: test-summary/action@v1
+        with:
+          paths: junit.xml 
+          show: all
+        if: always()
