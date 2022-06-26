@@ -37,7 +37,7 @@ window.md = function () {
     // Publications
     var publications = sections[2];
     md += "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
-    lis = publications.querySelectorAll("li");
+    var lis = publications.querySelectorAll("li");
     for (var i = 0; i < lis.length; i++) {
         md += (i + 1) + ". " + extractTextMD(lis[i]);
     }
@@ -58,7 +58,7 @@ window.md = function () {
                 } else {
                     md += clean(description.textContent);
                 }
-                svgs = li.querySelectorAll("svg");
+                var svgs = li.querySelectorAll("svg");
                 for (var i = 1; i < svgs.length; i++) {
                     md += svgs[i].outerHTML + " "
                 }
