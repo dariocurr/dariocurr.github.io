@@ -7,10 +7,15 @@
 	},
 	"devDependencies": {
 		"jest": "latest",
-		"jest-environment-jsdom": "latest"
+		"jest-environment-jsdom": "latest",
+		"jest-junit": "latest"
 	},
 	"jest": {
-		"verbose": true,
-		"testEnvironment": "jsdom"
+		"reporters": [
+			"default",
+			"jest-junit"
+		],
+		"testEnvironment": "jsdom",
+		"verbose": true
 	}
 }
