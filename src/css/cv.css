@@ -305,7 +305,7 @@ section#skills h3 {
 	}
 
 	#nav-bottom {
-		position: absolute;
+		position: fixed;
 		bottom: 2rem;
 	}
 
@@ -316,5 +316,11 @@ section#skills h3 {
 	#repo-link {
 		position: relative;
 		bottom: 0.2245rem;
+	}
+}
+
+@media (max-height: 800px) {
+	#navbar-list {
+		display: none !important;
 	}
 }
