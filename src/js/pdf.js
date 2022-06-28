@@ -258,7 +258,7 @@ function getCurriculumVitae() {
 						},
 						{
 							columns: icons,
-							columnGap: (261 - icons.length * 25) / (icons.length - 1),
+							columnGap: 150 / (icons.length),
 							margin: [2, 15],
 						},
 						{
@@ -497,12 +497,12 @@ function getResume() {
 		columns: [
 			{
 				text: dicts,
-				width: "80%",
+				width: "79%",
 			},
 			{
 				columns: icons,
-				columnGap: 17,
-				width: "20%",
+				columnGap: 65 / (icons.length),
+				width: "21%",
 				margin: [0, 3.8],
 			},
 		],
