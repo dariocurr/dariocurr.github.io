@@ -198,10 +198,6 @@ p {
 	transform: scale(1.075) perspective(1px)
 }
 
-.nav-icon {
-	color: #eee;
-}
-
 ul.nav-sections li {
 	padding-top: 0.25rem;
 }
@@ -258,6 +254,18 @@ section#skills h3 {
 		padding-right: 1rem;
 	}
 
+	#nav-home {
+		color: #eee;
+	}
+
+	#nav-toggler {
+		color: #aaa
+	}
+
+	#nav-toggler:hover {
+		background-color: transparent !important;
+	}
+
 	#repo-icon {
 		font-size: 1.25rem;
 	}
@@ -271,6 +279,13 @@ section#skills h3 {
 }
 
 @media (min-width: 992px) {
+
+	@media (max-height: 800px) {
+		#navbar-list {
+			display: none !important;
+		}
+	}
+
 	body {
 		padding-left: 17.5rem;
 	}
@@ -316,11 +331,5 @@ section#skills h3 {
 	#repo-link {
 		position: relative;
 		bottom: 0.2245rem;
-	}
-}
-
-@media (max-height: 800px) {
-	#navbar-list {
-		display: none !important;
 	}
 }
