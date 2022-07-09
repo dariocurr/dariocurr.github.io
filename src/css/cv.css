@@ -198,6 +198,10 @@ p {
 	transform: scale(1.075) perspective(1px)
 }
 
+#tools {
+	justify-items: center;
+}
+
 ul.nav-sections li {
 	padding-top: 0.25rem;
 }
