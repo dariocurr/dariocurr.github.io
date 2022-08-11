@@ -434,15 +434,16 @@ function getCurriculumVitae() {
 		compress: true,
 		pageMargins: [40, 40, 40, 35],
 		pageBreakBefore: function (currentNode) {
+			var style = currentNode["style"];
+			var verticalRatio = currentNode["startPosition"]["verticalRatio"];
+			if (style == "h2") {
+				var text = currentNode["text"].trim().toLowerCase();
+			}
 			return (
-				("columns" in currentNode &&
-					currentNode["startPosition"]["verticalRatio"] > 0.87) ||
-				(currentNode["style"] == "h2" &&
-					currentNode["startPosition"]["verticalRatio"] > 0.55) ||
-				(currentNode["style"] == "h3" &&
-					currentNode["startPosition"]["verticalRatio"] > 0.8) ||
-				(currentNode["style"] == "date" &&
-					currentNode["startPosition"]["verticalRatio"] > 0.8)
+				("columns" in currentNode && verticalRatio > 0.87) ||
+				(style == "date" && verticalRatio > 0.8) ||
+				(style == "h3" && verticalRatio > 0.8) ||
+				(text && text != "experience" && text != "publications")
 			);
 		},
 	};
@@ -665,8 +666,8 @@ function getResume() {
 			});
 		}
 	});
-	var rows = Math.floor(svgs.length / 8);
-	var step = svgs.length / (rows + 1);
+	var rows = Math.floor(svgs.length / 7);
+	var step = Math.ceil(svgs.length / (rows + 1));
 	for (var i = 0; i < rows; i++) {
 		columns[1].push(
 			{
