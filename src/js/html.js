@@ -20,77 +20,104 @@ var map = AmCharts.makeChart("world-map", {
     dataProvider: {
         map: "worldHigh",
         getAreasFromMap: true,
-        areas: [{
-            "id": "BE",
-            "showAsSelected": true,
-        }, {
-            "id": "HR",
-            "showAsSelected": true,
-        }, {
-            "id": "CZ",
-            "showAsSelected": true,
-        }, {
-            "id": "FR",
-            "showAsSelected": true,
-        }, {
-            "id": "GR",
-            "showAsSelected": true,
-        }, {
-            "id": "HU",
-            "showAsSelected": true,
-        }, {
-            "id": "IT",
-            "showAsSelected": true,
-        }, {
-            "id": "LU",
-            "showAsSelected": true,
-        }, {
-            "id": "MC",
-            "showAsSelected": true,
-        }, {
-            "id": "NL",
-            "showAsSelected": true,
-        }, {
-            "id": "NO",
-            "showAsSelected": true,
-        }, {
-            "id": "PL",
-            "showAsSelected": true,
-        }, {
-            "id": "SM",
-            "showAsSelected": true,
-        }, {
-            "id": "SK",
-            "showAsSelected": true,
-        }, {
-            "id": "SI",
-            "showAsSelected": true,
-        }, {
-            "id": "TR",
-            "showAsSelected": true,
-        }, {
-            "id": "GB",
-            "showAsSelected": true,
-        }, {
-            "id": "VA",
-            "showAsSelected": true,
-        }, {
-            "id": "AT",
-            "showAsSelected": true,
-        }, {
-            "id": "ES",
-            "showAsSelected": true,
-        }, {
-            "id": "DK",
-            "showAsSelected": true,
-        }, {
-            "id": "BG",
-            "showAsSelected": true,
-        }, {
-            "id": "RO",
-            "showAsSelected": true,
-        },
-        ]
+        areas: [
+            {
+                id: "BE",
+                showAsSelected: true,
+            },
+            {
+                id: "HR",
+                showAsSelected: true,
+            },
+            {
+                id: "CZ",
+                showAsSelected: true,
+            },
+            {
+                id: "FR",
+                showAsSelected: true,
+            },
+            {
+                id: "GR",
+                showAsSelected: true,
+            },
+            {
+                id: "HU",
+                showAsSelected: true,
+            },
+            {
+                id: "IT",
+                showAsSelected: true,
+            },
+            {
+                id: "LU",
+                showAsSelected: true,
+            },
+            {
+                id: "MC",
+                showAsSelected: true,
+            },
+            {
+                id: "NL",
+                showAsSelected: true,
+            },
+            {
+                id: "NO",
+                showAsSelected: true,
+            },
+            {
+                id: "PL",
+                showAsSelected: true,
+            },
+            {
+                id: "SM",
+                showAsSelected: true,
+            },
+            {
+                id: "SK",
+                showAsSelected: true,
+            },
+            {
+                id: "SI",
+                showAsSelected: true,
+            },
+            {
+                id: "TR",
+                showAsSelected: true,
+            },
+            {
+                id: "GB",
+                showAsSelected: true,
+            },
+            {
+                id: "VA",
+                showAsSelected: true,
+            },
+            {
+                id: "AT",
+                showAsSelected: true,
+            },
+            {
+                id: "ES",
+                showAsSelected: true,
+            },
+            {
+                id: "DK",
+                showAsSelected: true,
+            },
+            {
+                id: "BG",
+                showAsSelected: true,
+            },
+            {
+                id: "RO",
+                showAsSelected: true,
+            },
+            {
+                id: "PT",
+                showAsSelected: true,
+            },
+        ],
     },
     areasSettings: {
         autoZoom: true,
