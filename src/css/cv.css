@@ -154,6 +154,10 @@ p {
 	margin-top: 10rem !important;
 }
 
+.w-33 {
+	width: 33% !important;
+}
+
 .text-primary {
 	color: #f59d62 !important;
 }
