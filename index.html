@@ -51,17 +51,13 @@
         </span>
       </a>
       <div id="nav-bottom">
-        <div class="d-none d-lg-flex row mx-3 mb-3">
-          <div class="col-lg-6 w-50">
-            <button class="btn" onclick="pdf(shrinked=false)">
-              Download Curriculum
-            </button>
-          </div>
-          <div class="col-lg-6 w-50">
-            <button class="btn" onclick="pdf(shrinked=true)">
-              Download Resume
-            </button>
-          </div>
+        <div class="d-none d-lg-flex mb-3 justify-content-around">
+          <button class="w-33 btn px-1" onclick="pdf(shrinked=false)">
+            Download Curriculum
+          </button>
+          <button class="w-33 btn px-1" onclick="pdf(shrinked=true)">
+            Download Resume
+          </button>
         </div>
         <a
           id="repo-icon"
