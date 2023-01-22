@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v4.4.0
     hooks:
       - id: check-case-conflict
       - id: check-docstring-first
@@ -10,6 +10,8 @@ repos:
       - id: check-toml
       - id: check-vcs-permalinks
       - id: check-xml
+      - id: check-yaml
+        args: ['--unsafe']
       - id: destroyed-symlinks
       - id: detect-aws-credentials
         args: [--allow-missing-credentials]
@@ -17,9 +19,15 @@ repos:
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: mixed-line-ending
+      - id: name-tests-test
+        args: [--pytest-test-first]
       - id: no-commit-to-branch
-        args: [-b, main]
+        args: [-b, master]
       - id: pretty-format-json
         args: [--autofix, --no-sort-keys]
       - id: sort-simple-yaml
       - id: trailing-whitespace
+
+ci:
+    autoupdate_branch: develop
+    autoupdate_commit_msg: ⬆ [pre-commit.ci] pre-commit autoupdate
