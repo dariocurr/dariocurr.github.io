@@ -8,8 +8,5 @@
 			"USER": "node"
 		}
 	},
-	"extensions": [
-		"ritwickdey.LiveServer"
-	],
 	"remoteUser": "node"
 }
