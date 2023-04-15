@@ -117,6 +117,10 @@ var map = AmCharts.makeChart("world-map", {
                 id: "PT",
                 showAsSelected: true,
             },
+            {
+                id: "CA",
+                showAsSelected: true,
+            },
         ],
     },
     areasSettings: {
