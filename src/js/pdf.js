@@ -25,20 +25,20 @@ export function pdf(shrinked) {
 	console.log("PDF file generated!");
 };
 
-function extractTextPDF(tag) {
-	if (tag.querySelector("a")) {
-		return extractLinkPDF(tag);
-	} else {
-		return clean(tag.innerHTML);
-	}
+function getText(innerHTML) {
+	var text = document.createElement("textarea");
+	text.innerHTML = innerHTML;
+	return clean(text.textContent);
+
 }
 
-function extractLinkPDF(element) {
+function extractTextPDF(element) {
 	var dicts = [];
 	var text = clean(element.innerHTML);
 	element.querySelectorAll("a").forEach((a) => {
 		var index = text.indexOf("<");
-		dicts.push({ text: clean(text.substring(0, index)) + " " });
+		var beforeText = getText(text.substring(0, index));
+		dicts.push({ text: beforeText + " " });
 		dicts.push({
 			text: clean(a.textContent),
 			link: createLink(a.getAttribute("href")),
@@ -50,7 +50,7 @@ function extractLinkPDF(element) {
 		}
 	});
 	if (text.length > 0) {
-		dicts.push({ text: clean(text) });
+		dicts.push({ text: getText(text) });
 	}
 	return dicts;
 }
@@ -86,9 +86,9 @@ function createExperienceAndEducationListCurriculumPDF(section) {
 			text: clean(descriptionDiv.querySelector("span").innerHTML).toUpperCase(),
 			style: "subheading",
 		});
-		article.querySelectorAll("p").forEach((p) => {
+		article.querySelectorAll("p").forEach((paragraph) => {
 			content.push({
-				text: extractTextPDF(p),
+				text: extractTextPDF(paragraph),
 				style: "description",
 			});
 			content.push({
@@ -117,7 +117,7 @@ function createPublicationsListPDF(element) {
 	var papers = [];
 	lis.forEach((li) => {
 		var paragraph = li.querySelector("p");
-		var dicts = extractLinkPDF(paragraph);
+		var dicts = extractTextPDF(paragraph);
 		var text = dicts.pop(2)["text"];
 		paragraph.querySelectorAll("em").forEach((em) => {
 			var index = text.indexOf("<");
@@ -217,7 +217,7 @@ function getCurriculumVitae() {
 		text: clean(about.querySelector("h1").innerHTML).toUpperCase() + "\n\n",
 		style: "h1",
 	});
-	var dicts = extractLinkPDF(about.querySelector("span"));
+	var dicts = extractTextPDF(about.querySelector("span"));
 	dicts[0]["text"] = dicts[0]["text"].replaceAll(" · ", "  ·  ").toUpperCase();
 	dicts[0]["style"] = "subheading";
 	dicts[1]["style"].push("subheading");
@@ -461,7 +461,7 @@ function getResume() {
 		text: clean(about.querySelector("h1").innerHTML).toUpperCase(),
 		style: ["h1", "titleDivisor"],
 	});
-	var dicts = extractLinkPDF(about.querySelector("span"));
+	var dicts = extractTextPDF(about.querySelector("span"));
 	dicts[0]["text"] = dicts[0]["text"].replaceAll(" · ", "  ·  ").toUpperCase();
 	dicts[0]["style"] = "subtitle";
 	dicts[1]["style"].unshift("subtitle");
