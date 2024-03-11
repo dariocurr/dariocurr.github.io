@@ -121,6 +121,14 @@ var map = AmCharts.makeChart("world-map", {
                 id: "CA",
                 showAsSelected: true,
             },
+            {
+                id: "AL",
+                showAsSelected: true,
+            },
+            {
+                id: "MO",
+                showAsSelected: true,
+            },
         ],
     },
     areasSettings: {
