@@ -1,811 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <meta name="description" content="Dario Curreri's Curriculum Vitae" />
-    <meta name="author" content="Dario Curreri" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
-    <title>Dario Curreri's Curriculum Vitae</title>
-    <link rel="icon" href="assets/img/dev.svg" />
 
-    <!-- Google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-    <!-- Bootstrap core CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-    <!-- Core CSS -->
-    <link href="src/css/cv.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="description" content="Dario Curreri's Curriculum Vitae" />
+  <meta name="author" content="Dario Curreri" />
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+  <title>Dario Curreri's Curriculum Vitae</title>
+  <link rel="icon" href="assets/img/dev.svg" />
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <a href="#page-top">
-        <span id="nav-home" class="d-block d-lg-none">
-          <i class="fas fa-house-user"></i>
-        </span>
-        <span class="d-none d-lg-block">
-          <img
-            width="215px"
-            height="215px"
-            class="img-fluid rounded-circle mx-auto"
-            src="assets/img/profile.webp"
-            alt="Dario's picture"
-          />
-        </span>
-      </a>
-      <div id="nav-bottom">
-        <div class="d-none d-lg-flex mx-3 mb-3 justify-content-around">
-          <button class="w-40 btn" onclick="pdf(shrinked=false)">
-            Download Curriculum
-          </button>
-          <a
-            class="w-40"
-            download="Dario Curreri's Resume.pdf"
-            href="https://raw.githubusercontent.com/dariocurr/resume/main/resume.pdf"
-          >
-            <button class="btn">Download Resume</button>
-          </a>
-        </div>
-        <a
-          id="repo-icon"
-          href="https://github.com/dariocurr/dariocurr.github.io"
-          target="_blank"
-        >
-          <i class="fab fa-git-alt"></i>
-        </a>
-        <a
-          id="repo-link"
-          class="ms-2"
-          href="https://github.com/dariocurr/dariocurr.github.io"
-          target="_blank"
-        >
-          dariocurr/dariocurr.github.io
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet"
+    crossorigin="anonymous" />
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <!-- Core CSS -->
+  <link href="src/css/cv.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a href="#page-top">
+      <span id="nav-home" class="d-block d-lg-none">
+        <i class="fas fa-house-user"></i>
+      </span>
+      <span class="d-none d-lg-block">
+        <img width="215px" height="215px" class="img-fluid rounded-circle mx-auto" src="assets/img/profile.webp"
+          alt="Dario's picture" />
+      </span>
+    </a>
+    <div id="nav-bottom">
+      <div class="d-none d-lg-flex mx-3 mb-3 justify-content-around">
+        <button class="w-40 btn" onclick="pdf(shrinked=false)">
+          Download Curriculum
+        </button>
+        <a class="w-40" download="Dario Curreri's Resume.pdf"
+          href="https://raw.githubusercontent.com/dariocurr/resume/main/resume.pdf">
+          <button class="btn">Download Resume</button>
         </a>
       </div>
-      <button
-        id="nav-toggler"
-        class="navbar-toggler fa-solid fa-bars border-0 p-0"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar-list"
-        aria-controls="navbar-list"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      ></button>
-      <div class="navbar-collapse collapse flex-grow-0 mt-4" id="navbar-list">
-        <ul class="nav-sections">
+      <a id="repo-icon" href="https://github.com/dariocurr/dariocurr.github.io" target="_blank">
+        <i class="fab fa-git-alt"></i>
+      </a>
+      <a id="repo-link" class="ms-2" href="https://github.com/dariocurr/dariocurr.github.io" target="_blank">
+        dariocurr/dariocurr.github.io
+      </a>
+    </div>
+    <button id="nav-toggler" class="navbar-toggler fa-solid fa-bars border-0 p-0" type="button" data-toggle="collapse"
+      data-target="#navbar-list" aria-controls="navbar-list" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
+    <div class="navbar-collapse collapse flex-grow-0 mt-4" id="navbar-list">
+      <ul class="nav-sections">
+        <li>
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#publications">Publications</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#interests">Interests</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Content -->
+  <main>
+    <!-- About -->
+    <section id="about">
+      <div class="w-100">
+        <h1>Dario Curreri</h1>
+        <div class="mt-3 mb-6">
+          <span class="subheading">26 years old · Italian ·
+            <a class="text-lowercase" href="mailto:dariocurr@gmail.com">
+              dariocurr@gmail.com
+            </a>
+          </span>
+        </div>
+        <p class="lead">
+          Graduated computer scientist with a wide academic and working
+          background, constantly looking for new challenges and experiences.
+          <br />
+          Throughout my studies and work experiences, I have honed my problem
+          solving ability, developed several skills, faced fast-paced
+          environments
+          <br />
+          I am a contributor to many open source projects: I firmly believe
+          that collaboration is the key to innovation
+        </p>
+        <div class="icons">
+          <a class="social-icon" href="https://scholar.google.it/citations?hl=en&user=DhJKkeMAAAAJ" target="_blank">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/dariocurr" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="social-icon" href="https://github.com/dariocurr/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="social-icon" href="https://dariocurr.medium.com" target="_blank">
+            <i class="fab fa-medium"></i>
+          </a>
+        </div>
+        <div class="d-flex d-lg-none row mt-5">
+          <div class="col-12">
+            <button class="btn" onclick="pdf(shrinked=false)">
+              Download Curriculum
+            </button>
+          </div>
+          <div class="col-12 mt-4">
+            <button class="btn" onclick="pdf(shrinked=true)">
+              Download Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!-- Experience -->
+    <section id="experience">
+      <div class="w-100">
+        <h2>Experience</h2>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>DevOps and Technical Product Owner</h3>
+            <div class="mb-2">
+              <span class="subheading">hiop</span>
+            </div>
+            <p class="mb-2">
+              DevOps and Technical P.O. at
+              <a href="https://www.hiop.io" target="_blank">hiop</a>:
+            </p>
+            <ul class="ms-4">
+              <li>
+                <p>
+                  Co-created the company's flagship product:
+                  high-performance data processing platform enabling rapid high-value data provision and data-driven
+                  decision making
+                </p>
+              </li>
+              <li>
+                <p>
+                  Co-created an HPC framework and infrastructure on which relies real-time AI-based applications
+                </p>
+              </li>
+              <li>
+                <p>
+                  Designed and maintained company's CI/CD pipelines,
+                  improving drastically deployment efficiency and reliability
+                </p>
+              </li>
+              <li>
+                <p>
+                  Developed and maintained over 20 essential libraries building the company's codebase
+                </p>
+              </li>
+              <li>
+                <p>
+                  Co-led team growth, training and knowledge sharing among the team,
+                  expanding from 5 to 20+ people
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">October 2021 - Present</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Full Stack Developer</h3>
+            <div class="mb-2">
+              <span class="subheading">CNR's Institute of Biophysics</span>
+            </div>
+            <p class="mb-2">
+              Collaborator of
+              <a href="https://www.ibf.cnr.it" target="_blank">
+                Biophysics Institute of Palermo's CNR (National Research
+                Council)
+              </a>
+              involved in the
+              <a href="https://www.humanbrainproject.eu/en/" target="_blank">
+                Human Brain Project</a>
+              with the aim of developing a Python and JS based web application
+              named
+              <a href="https://hhnb.ebrains-italy.eu/efelg/" target="_blank">NeuroFeatureExtract</a>
+              to analyze electrophysiological features (<a
+                href="https://www.frontiersin.org/articles/10.3389/fninf.2021.713899/full" target="_blank">paper</a>).
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">December 2020 - August 2021</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Bioinformatics Trainee</h3>
+            <div class="mb-2">
+              <span class="subheading">ISMETT</span>
+            </div>
+            <p>
+              Practitioner on efficient algorithms and technologies for the
+              analysis of biological sequences represented in FASTA format at
+              <a href="https://www.ismett.edu/en/" target="_blank">
+                ISMETT (Mediterranean Institute for Transplantation and
+                Advanced Specialized Therapies)</a>, as part of a university internship project
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">May 2021 - August 2021</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Collaborator of Machine Learning Research Project</h3>
+            <div class="mb-2">
+              <span class="subheading">Università degli Studi di Napoli Federico II</span>
+            </div>
+            <p>
+              Collaborator of a research project led by
+              <a href="https://www.unina.it/en_GB" target="_blank">UNINA</a>
+              with the aim of developing a Python-based ML fuzzy classifier to
+              diagnose celiac disease in Sicilian and Maltese children
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">November 2019 - April 2020</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Full Stack Developer Trainee</h3>
+            <div class="mb-2">
+              <span class="subheading">Informamuse</span>
+            </div>
+            <p>
+              Web developer for ICT solutions company
+              <a href="https://www.informamuse.com/en/home/" target="_blank">Informamuse</a>, as part of a university
+              internship project
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">January 2019 - April 2019</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <hr />
+    <!-- Publications -->
+    <section id="publications">
+      <div class="w-100">
+        <h2>Publications</h2>
+        <ol>
           <li>
-            <a class="nav-link" href="#about">About</a>
+            <p class="ms-3">
+              Luca Leonardo Bologna, Roberto Smiriglia, Dario Curreri and
+              Michele Migliore.
+              <a href="https://www.frontiersin.org/articles/10.3389/fninf.2021.713899/full" target="_blank"
+                class="paper">
+                The EBRAINS NeuroFeatureExtract: an online resource for the
+                extraction of neural activity features from
+                electrophysiological data</a>. <em>Frontiers in Neuroinformatics: 43</em>.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <hr />
+    <!-- Education -->
+    <section id="education">
+      <div class="w-100">
+        <h2>Education</h2>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Double Master in Computer Science</h3>
+            <div class="mb-2">
+              <span class="subheading">
+                Università degli Studi di Palermo / Université Gustave Eiffel
+              </span>
+            </div>
+            <p>
+              Double Master's degree achieved cum laude at
+              <a href="https://www.unipa.it/mobilita/en/" target="_blank">
+                UNIPA
+              </a>
+              and
+              <a href="https://www.univ-gustave-eiffel.fr/en/" target="_blank">
+                UGE
+              </a>
+              in 2 out of 2 years, with final thesis about
+              <a href="https://raw.githubusercontent.com/dariocurr/thesis/main/thesis.pdf" target="_blank">
+                RDF data and columnar formats
+              </a>
+            </p>
+            <p>
+              ECTS: 120 out of 120
+              <br />
+              GPA: 29.29 out of 30
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">September 2019 - October 2021</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Double Degree Exchange Program</h3>
+            <div class="mb-2">
+              <span class="subheading">Université Gustave Eiffel</span>
+            </div>
+            <p>
+              Wonderful 5-month study experience at the
+              <a href="https://www.univ-gustave-eiffel.fr/en/" target="_blank">
+                UGE
+              </a>
+              of Champs-sur-Marne (Paris) that led to a double Master's degree
+              and gave the opportunity to improve a broad set of skills and
+              learn French
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">September 2020 - January 2021</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>
+              The Cornell, Maryland, Max Planck Pre-doctoral Research School
+            </h3>
+            <div class="mb-2">
+              <span class="subheading">CMMRS 2020</span>
+            </div>
+            <p>
+              Participation in
+              <a href="https://cmmrs2020.mpi-sws.org/" target="_blank">
+                CMMRS 2020
+              </a>
+              about emerging trends in computer science
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">August 2020</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>European Summer School on Information Science</h3>
+            <div class="mb-2">
+              <span class="subheading">ESSIS 2019</span>
+            </div>
+            <p>
+              Participation in
+              <a href="http://einfose.ffos.hr/summer-school/" target="_blank">
+                ESSIS 2019
+              </a>
+              about the new information science methodologies
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">September 2019</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Bachelor in Computer Science</h3>
+            <div class="mb-2">
+              <span class="subheading">Università degli Studi di Palermo</span>
+            </div>
+            <p>
+              Bachelor's degree achieved cum laude at
+              <a href="https://www.unipa.it/mobilita/en/" target="_blank">
+                UNIPA
+              </a>
+              in 3 out of 3 years, with final thesis about
+              <a href="assets/img/poster.png" target="_blank">
+                suffix array data structure
+              </a>
+            </p>
+            <p>
+              ECTS: 186 out of 180
+              <br />
+              GPA: 29.00 out of 30
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">September 2016 - July 2019</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Erasmus Exchange Program</h3>
+            <div class="mb-2">
+              <span class="subheading">Eötvös Loránd University</span>
+            </div>
+            <p>
+              Outstanding 5-month study experience at
+              <a href="https://www.elte.hu/en/" target="_blank"> ELTE </a>
+              University of Budapest involved in the Erasmus+ project, which
+              gave the opportunity to improve a vast set of skills and learn
+              about new cultures
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">September 2018 - January 2019</span>
+          </div>
+        </article>
+        <article class="row">
+          <div class="col-lg-9">
+            <h3>Scientific High School Diploma</h3>
+            <div class="mb-2">
+              <span class="subheading">Liceo Scientifico I.I.S.S. Nicolò Palmeri</span>
+            </div>
+            <p>
+              Diploma obtained at
+              <a href="https://www.liceopalmeri.edu.it/" target="_blank">
+                Liceo Scientifico Palmeri
+              </a>
+              in 5 out of 5 years
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end pt-1">
+            <span class="text-primary">September 2011 - July 2016</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <hr />
+    <!-- Skills -->
+    <section id="skills">
+      <div class="w-100">
+        <h2>Skills</h2>
+        <h3>Certifications</h3>
+        <div class="mb-4">
+          <a href="https://bestr.it/verify/EJ2XAFDPBL" target="_blank">
+            <img alt="Data Science" class="my-4 me-4" height="150" width="150"
+              src="https://bestr.it/filemanager/show/8f99bc52-e576-4ecf-9dbc-095bd38d36f4.png">
+          </a>
+          <br>
+          <a href="https://www.credly.com/badges/33614ca6-2f0d-456b-87e9-bf8b8591cbf8/public_url" target="_blank">
+            <img alt="AWS Cloud Practitioner" class="my-4 me-4" height="150" width="150"
+              src="https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png">
+          </a>
+          <a href="https://www.credly.com/badges/e9b6c64c-2175-4345-950b-6331fd88af43/public_url" target="_blank">
+            <img alt="AWS Developer Associate" class="my-4 me-4" height="150" width="150"
+              src="https://images.credly.com/size/680x680/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png">
+          </a>
+          <a href="https://www.credly.com/badges/0f158c45-adb0-4ac9-9d5f-0039649e4808/public_url" target="_blank">
+            <img alt="GCP Cloud Digital Leader" class="my-4 me-4" height="150" width="150"
+              src="https://images.credly.com/size/680x680/images/44994cda-b5b0-44cb-9a6d-d29b57163073/image.png">
+          </a>
+          <br>
+          <a href="https://www.credly.com/badges/0f59d53a-1ecb-4f6f-8a84-96fa3cb55965/public_url" target="_blank">
+            <img alt="GitHub Foundations" class="my-4 me-4" height="150" width="150"
+              src="https://images.credly.com/size/680x680/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png">
+          </a>
+          <a href="https://www.credly.com/badges/6da40853-2bc6-4738-887e-8710a10e7a29/public_url" target="_blank">
+            <img alt="GitHub Actions" class="my-4 me-4" height="150" width="150"
+              src="https://images.credly.com/size/680x680/images/89efc3e7-842b-4790-b09b-9ea5efc71ec3/image.png">
+          </a>
+          <a href="https://www.credly.com/badges/b3c3ae21-61a9-4519-85d6-29a3bb8c443a/public_url" target="_blank">
+            <img alt="GitHub Advanced Security" class="my-4 me-4" height="150" width="150"
+              src="https://images.credly.com/size/680x680/images/c9ed294b-f8ac-48fa-a8c3-96dab1f110f2/image.png">
+          </a>
+        </div>
+
+        <h3>Languages</h3>
+        <ul class="fa-ul languages">
+          <li>
+            <div class="row">
+              <div class="col-xl-1 col-sm-2 col-3">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                <p>Italian</p>
+              </div>
+              <div class="col-xl-11 col-sm-10 col-9">
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+              </div>
+            </div>
           </li>
           <li>
-            <a class="nav-link" href="#experience">Experience</a>
+            <div class="row">
+              <div class="col-xl-1 col-sm-2 col-3">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                <p>
+                  <a href="assets/doc/B2_english.pdf" target="_blank">
+                    English
+                  </a>
+                </p>
+              </div>
+              <div class="col-xl-11 col-sm-10 col-9">
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+              </div>
+            </div>
           </li>
           <li>
-            <a class="nav-link" href="#publications">Publications</a>
+            <div class="row">
+              <div class="col-xl-1 col-sm-2 col-3">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                <p>
+                  <a href="assets/doc/A2_french.pdf" target="_blank">
+                    French
+                  </a>
+                </p>
+              </div>
+              <div class="col-xl-11 col-sm-10 col-9">
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <h3>Programming Languages & Tools</h3>
+        <ul id="tools" class="icons">
+          <li><i class="fas fa-2x fa-terminal"></i></li>
+          <li><i class="fab fa-2x fa-git-alt"></i></li>
+          <li><i class="fab fa-2x fa-docker"></i></li>
+          <li><i class="fas fa-2x fa-cloud"></i></li>
+          <li><i class="fab fa-2x fa-aws"></i></li>
+          <li><i class="fab fa-2x fa-rust"></i></li>
+          <li><i class="fab fa-2x fa-python"></i></li>
+          <li><i class="fab fa-2x fa-java"></i></li>
+          <li><i class="fab fa-2x fa-cuttlefish"></i></li>
+          <li><i class="fab fa-2x fa-r-project"></i></li>
+          <li><i class="fab fa-2x fa-php"></i></li>
+          <li><i class="fab fa-2x fa-html5"></i></li>
+          <li><i class="fab fa-2x fa-css3-alt"></i></li>
+          <li><i class="fab fa-2x fa-bootstrap"></i></li>
+          <li><i class="fab fa-2x fa-js-square"></i></li>
+          <li><i class="fab fa-2x fa-android"></i></li>
+          <li><i class="fas fa-2x fa-database"></i></li>
+          <li><i class="fas fa-2x fa-server"></i></li>
+          <li><i class="fab fa-2x fa-linux"></i></li>
+          <li><i class="fab fa-2x fa-windows"></i></li>
+          <li><i class="fab fa-2x fa-btc"></i></li>
+          <li><i class="fab fa-2x fa-ethereum"></i></li>
+        </ul>
+        <h3>Workflow</h3>
+        <ul class="fa-ul workflow">
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>DevOps (Bash, Git, Docker, CI/CD pipelines)</p>
           </li>
           <li>
-            <a class="nav-link" href="#education">Education</a>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>Cloud (AWS, GCP)</p>
           </li>
           <li>
-            <a class="nav-link" href="#skills">Skills</a>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>
+              Data science (supervised and unsupervised learning, Pyhton, R,
+              MATLAB, keras, tensorflow, scikit-learn, scipy, pandas,
+              matplotlib)
+            </p>
           </li>
           <li>
-            <a class="nav-link" href="#interests">Interests</a>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>
+              Big data (ETL/ELT, data warehousing, data lake, MapReduce,
+              Hadoop, Spark, Dask)
+            </p>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>Software engineering (Rust, Python, Java, Scala, C, C++)</p>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>
+              Web application (FastAPI, Django, Spring, Android, Shiny,
+              JavaScript, jQuery, PHP, HTML, CSS)
+            </p>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>
+              Relational and non-relational databases (MySQL, PostgreSQL,
+              MongoDB, Redis, Neo4j, RDF, SPARQL)
+            </p>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>Computer graphics (OpenGL)</p>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>Blockchain technology (Ethereum platform, smart contracts)</p>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fas fa-check"></i></span>
+            <p>Bioinformatics (FASTA)</p>
           </li>
         </ul>
       </div>
-    </nav>
-    <!-- Content -->
-    <main>
-      <!-- About -->
-      <section id="about">
-        <div class="w-100">
-          <h1>Dario Curreri</h1>
-          <div class="mt-3 mb-6">
-            <span class="subheading"
-              >26 years old · Italian ·
-              <a class="text-lowercase" href="mailto:dariocurr@gmail.com">
-                dariocurr@gmail.com
-              </a>
-            </span>
-          </div>
-          <p class="lead">
-            Graduated computer scientist with a wide academic and working
-            background, constantly looking for new challenges and experiences.
-            <br />
-            Throughout my studies and work experiences, I have honed my problem
-            solving ability, developed several skills, faced fast-paced
-            environments
-            <br />
-            I am a contributor to many open source projects: I firmly believe
-            that collaboration is the key to innovation
-          </p>
-          <div class="icons">
-            <a
-              class="social-icon"
-              href="https://scholar.google.it/citations?hl=en&user=DhJKkeMAAAAJ"
-              target="_blank"
-            >
-              <i class="fas fa-graduation-cap"></i>
-            </a>
-            <a
-              class="social-icon"
-              href="https://www.linkedin.com/in/dariocurr"
-              target="_blank"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              class="social-icon"
-              href="https://github.com/dariocurr/"
-              target="_blank"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              class="social-icon"
-              href="https://dariocurr.medium.com"
-              target="_blank"
-            >
-              <i class="fab fa-medium"></i>
-            </a>
-          </div>
-          <div class="d-flex d-lg-none row mt-5">
-            <div class="col-12">
-              <button class="btn" onclick="pdf(shrinked=false)">
-                Download Curriculum
-              </button>
-            </div>
-            <div class="col-12 mt-4">
-              <button class="btn" onclick="pdf(shrinked=true)">
-                Download Resume
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr />
-      <!-- Experience -->
-      <section id="experience">
-        <div class="w-100">
-          <h2>Experience</h2>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>DevOps and Technical Product Owner</h3>
-              <div class="mb-2">
-                <span class="subheading">hiop</span>
-              </div>
-              <p class="mb-2">
-                DevOps and Technical P.O. at
-                <a href="https://www.hiop.io" target="_blank">hiop</a>:
-              </p>
-              <ul class="ms-4">
-                <li>
-                  <p>
-                    Co-creator of several components that led to the company's
-                    flagship product: an high-performance data processing mesh
-                    platform that enables DaC, quickly high-value data provision
-                    and data-driven decision making
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Co-creator of an HPC infrastructure on which relies
-                    real-time AI-based applications
-                  </p>
-                </li>
-                <li>
-                  <p>Designer and maintainer of company's CI/CD pipelines</p>
-                </li>
-                <li>
-                  <p>
-                    Creator and maintainer of several libraries on which the
-                    company's codebase relies
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Co-led growth, training and knowledge sharing among the
-                    team, which increased from 5 to 15 people
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">October 2021 - Present</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Full Stack Developer</h3>
-              <div class="mb-2">
-                <span class="subheading">CNR's Institute of Biophysics</span>
-              </div>
-              <p class="mb-2">
-                Collaborator of
-                <a href="https://www.ibf.cnr.it" target="_blank">
-                  Biophysics Institute of Palermo's CNR (National Research
-                  Council)
-                </a>
-                involved in the
-                <a href="https://www.humanbrainproject.eu/en/" target="_blank">
-                  Human Brain Project</a
-                >
-                with the aim of developing a Python and JS based web application
-                named
-                <a href="https://hhnb.ebrains-italy.eu/efelg/" target="_blank"
-                  >NeuroFeatureExtract</a
-                >
-                to analyze electrophysiological features (<a
-                  href="https://www.frontiersin.org/articles/10.3389/fninf.2021.713899/full"
-                  target="_blank"
-                  >paper</a
-                >).
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">December 2020 - August 2021</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Bioinformatics Trainee</h3>
-              <div class="mb-2">
-                <span class="subheading">ISMETT</span>
-              </div>
-              <p>
-                Practitioner on efficient algorithms and technologies for the
-                analysis of biological sequences represented in FASTA format at
-                <a href="https://www.ismett.edu/en/" target="_blank">
-                  ISMETT (Mediterranean Institute for Transplantation and
-                  Advanced Specialized Therapies)</a
-                >, as part of a university internship project
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">May 2021 - August 2021</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Collaborator of Machine Learning Research Project</h3>
-              <div class="mb-2">
-                <span class="subheading"
-                  >Università degli Studi di Napoli Federico II</span
-                >
-              </div>
-              <p>
-                Collaborator of a research project led by
-                <a href="https://www.unina.it/en_GB" target="_blank">UNINA</a>
-                with the aim of developing a Python-based ML fuzzy classifier to
-                diagnose celiac disease in Sicilian and Maltese children
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">November 2019 - April 2020</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Full Stack Developer Trainee</h3>
-              <div class="mb-2">
-                <span class="subheading">Informamuse</span>
-              </div>
-              <p>
-                Web developer for ICT solutions company
-                <a href="https://www.informamuse.com/en/home/" target="_blank"
-                  >Informamuse</a
-                >, as part of a university internship project
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">January 2019 - April 2019</span>
-            </div>
-          </article>
-        </div>
-      </section>
-      <hr />
-      <!-- Publications -->
-      <section id="publications">
-        <div class="w-100">
-          <h2>Publications</h2>
-          <ol>
-            <li>
-              <p class="ms-3">
-                Luca Leonardo Bologna, Roberto Smiriglia, Dario Curreri and
-                Michele Migliore.
-                <a
-                  href="https://www.frontiersin.org/articles/10.3389/fninf.2021.713899/full"
-                  target="_blank"
-                  class="paper"
-                >
-                  The EBRAINS NeuroFeatureExtract: an online resource for the
-                  extraction of neural activity features from
-                  electrophysiological data</a
-                >. <em>Frontiers in Neuroinformatics: 43</em>.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </section>
-      <hr />
-      <!-- Education -->
-      <section id="education">
-        <div class="w-100">
-          <h2>Education</h2>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Double Master in Computer Science</h3>
-              <div class="mb-2">
-                <span class="subheading">
-                  Università degli Studi di Palermo / Université Gustave Eiffel
-                </span>
-              </div>
-              <p>
-                Double Master's degree achieved cum laude at
-                <a href="https://www.unipa.it/mobilita/en/" target="_blank">
-                  UNIPA
-                </a>
-                and
-                <a
-                  href="https://www.univ-gustave-eiffel.fr/en/"
-                  target="_blank"
-                >
-                  UGE
-                </a>
-                in 2 out of 2 years, with final thesis about
-                <a
-                  href="https://raw.githubusercontent.com/dariocurr/thesis/main/thesis.pdf"
-                  target="_blank"
-                >
-                  RDF data and columnar formats
-                </a>
-              </p>
-              <p>
-                ECTS: 120 out of 120
-                <br />
-                GPA: 29.29 out of 30
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">September 2019 - October 2021</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Double Degree Exchange Program</h3>
-              <div class="mb-2">
-                <span class="subheading">Université Gustave Eiffel</span>
-              </div>
-              <p>
-                Wonderful 5-month study experience at the
-                <a
-                  href="https://www.univ-gustave-eiffel.fr/en/"
-                  target="_blank"
-                >
-                  UGE
-                </a>
-                of Champs-sur-Marne (Paris) that led to a double Master's degree
-                and gave the opportunity to improve a broad set of skills and
-                learn French
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">September 2020 - January 2021</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>
-                The Cornell, Maryland, Max Planck Pre-doctoral Research School
-              </h3>
-              <div class="mb-2">
-                <span class="subheading">CMMRS 2020</span>
-              </div>
-              <p>
-                Participation in
-                <a href="https://cmmrs2020.mpi-sws.org/" target="_blank">
-                  CMMRS 2020
-                </a>
-                about emerging trends in computer science
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">August 2020</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>European Summer School on Information Science</h3>
-              <div class="mb-2">
-                <span class="subheading">ESSIS 2019</span>
-              </div>
-              <p>
-                Participation in
-                <a href="http://einfose.ffos.hr/summer-school/" target="_blank">
-                  ESSIS 2019
-                </a>
-                about the new information science methodologies
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">September 2019</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Bachelor in Computer Science</h3>
-              <div class="mb-2">
-                <span class="subheading"
-                  >Università degli Studi di Palermo</span
-                >
-              </div>
-              <p>
-                Bachelor's degree achieved cum laude at
-                <a href="https://www.unipa.it/mobilita/en/" target="_blank">
-                  UNIPA
-                </a>
-                in 3 out of 3 years, with final thesis about
-                <a href="assets/img/poster.png" target="_blank">
-                  suffix array data structure
-                </a>
-              </p>
-              <p>
-                ECTS: 186 out of 180
-                <br />
-                GPA: 29.00 out of 30
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">September 2016 - July 2019</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Erasmus Exchange Program</h3>
-              <div class="mb-2">
-                <span class="subheading">Eötvös Loránd University</span>
-              </div>
-              <p>
-                Outstanding 5-month study experience at
-                <a href="https://www.elte.hu/en/" target="_blank"> ELTE </a>
-                University of Budapest involved in the Erasmus+ project, which
-                gave the opportunity to improve a vast set of skills and learn
-                about new cultures
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">September 2018 - January 2019</span>
-            </div>
-          </article>
-          <article class="row">
-            <div class="col-lg-9">
-              <h3>Scientific High School Diploma</h3>
-              <div class="mb-2">
-                <span class="subheading"
-                  >Liceo Scientifico I.I.S.S. Nicolò Palmeri</span
-                >
-              </div>
-              <p>
-                Diploma obtained at
-                <a href="https://www.liceopalmeri.edu.it/" target="_blank">
-                  Liceo Scientifico Palmeri
-                </a>
-                in 5 out of 5 years
-              </p>
-            </div>
-            <div class="col-lg-3 text-lg-end pt-1">
-              <span class="text-primary">September 2011 - July 2016</span>
-            </div>
-          </article>
-        </div>
-      </section>
-      <hr />
-      <!-- Skills -->
-      <section id="skills">
-        <div class="w-100">
-          <h2>Skills</h2>
-          <h3>Certifications</h3>
-          <ul class="fa-ul certifications">
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a
-                href="https://www.credly.com/badges/33614ca6-2f0d-456b-87e9-bf8b8591cbf8/public_url"
-                target="_blank"
-              >
-                AWS Cloud Practitioner
-              </a>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a
-                href="https://www.credly.com/badges/e9b6c64c-2175-4345-950b-6331fd88af43/public_url"
-                target="_blank"
-              >
-                AWS Developer Associate
-              </a>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a href="assets/doc/data_science.pdf" target="_blank">
-                Data Science
-              </a>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a
-                href="https://www.credly.com/badges/0f158c45-adb0-4ac9-9d5f-0039649e4808/public_url"
-                target="_blank"
-              >
-                GCP Cloud Digital Leader
-              </a>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a
-                href="https://www.credly.com/badges/0f59d53a-1ecb-4f6f-8a84-96fa3cb55965/public_url"
-                target="_blank"
-              >
-                GitHub Foundations
-              </a>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a
-                href="https://www.credly.com/badges/6da40853-2bc6-4738-887e-8710a10e7a29/public_url"
-                target="_blank"
-              >
-                GitHub Actions
-              </a>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate"></i></span>
-              <a
-                href="https://www.credly.com/badges/b3c3ae21-61a9-4519-85d6-29a3bb8c443a/public_url"
-                target="_blank"
-              >
-                GitHub Advanced Security
-              </a>
-            </li>
-          </ul>
-          <h3>Languages</h3>
-          <ul class="fa-ul languages">
-            <li>
-              <div class="row">
-                <div class="col-xl-1 col-sm-2 col-3">
-                  <span class="fa-li"><i class="fas fa-check"></i></span>
-                  <p>Italian</p>
-                </div>
-                <div class="col-xl-11 col-sm-10 col-9">
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="col-xl-1 col-sm-2 col-3">
-                  <span class="fa-li"><i class="fas fa-check"></i></span>
-                  <p>
-                    <a href="assets/doc/B2_english.pdf" target="_blank">
-                      English
-                    </a>
-                  </p>
-                </div>
-                <div class="col-xl-11 col-sm-10 col-9">
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="far fa-circle fa-sm"></i>
-                  <i class="far fa-circle fa-sm"></i>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="col-xl-1 col-sm-2 col-3">
-                  <span class="fa-li"><i class="fas fa-check"></i></span>
-                  <p>
-                    <a href="assets/doc/A2_french.pdf" target="_blank">
-                      French
-                    </a>
-                  </p>
-                </div>
-                <div class="col-xl-11 col-sm-10 col-9">
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="fas fa-circle fa-sm"></i>
-                  <i class="far fa-circle fa-sm"></i>
-                  <i class="far fa-circle fa-sm"></i>
-                  <i class="far fa-circle fa-sm"></i>
-                  <i class="far fa-circle fa-sm"></i>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <h3>Programming Languages & Tools</h3>
-          <ul id="tools" class="icons">
-            <li><i class="fas fa-2x fa-terminal"></i></li>
-            <li><i class="fab fa-2x fa-git-alt"></i></li>
-            <li><i class="fab fa-2x fa-docker"></i></li>
-            <li><i class="fas fa-2x fa-cloud"></i></li>
-            <li><i class="fab fa-2x fa-aws"></i></li>
-            <li><i class="fab fa-2x fa-rust"></i></li>
-            <li><i class="fab fa-2x fa-python"></i></li>
-            <li><i class="fab fa-2x fa-java"></i></li>
-            <li><i class="fab fa-2x fa-cuttlefish"></i></li>
-            <li><i class="fab fa-2x fa-r-project"></i></li>
-            <li><i class="fab fa-2x fa-php"></i></li>
-            <li><i class="fab fa-2x fa-html5"></i></li>
-            <li><i class="fab fa-2x fa-css3-alt"></i></li>
-            <li><i class="fab fa-2x fa-bootstrap"></i></li>
-            <li><i class="fab fa-2x fa-js-square"></i></li>
-            <li><i class="fab fa-2x fa-android"></i></li>
-            <li><i class="fas fa-2x fa-database"></i></li>
-            <li><i class="fas fa-2x fa-server"></i></li>
-            <li><i class="fab fa-2x fa-linux"></i></li>
-            <li><i class="fab fa-2x fa-windows"></i></li>
-            <li><i class="fab fa-2x fa-btc"></i></li>
-            <li><i class="fab fa-2x fa-ethereum"></i></li>
-          </ul>
-          <h3>Workflow</h3>
-          <ul class="fa-ul workflow">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>DevOps (Bash, Git, Docker, CI/CD pipelines)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Cloud (AWS, GCP)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>
-                Data science (supervised and unsupervised learning, Pyhton, R,
-                MATLAB, keras, tensorflow, scikit-learn, scipy, pandas,
-                matplotlib)
-              </p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>
-                Big data (ETL/ELT, data warehousing, data lake, MapReduce,
-                Hadoop, Spark, Dask)
-              </p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Software engineering (Rust, Python, Java, Scala, C, C++)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>
-                Web application (FastAPI, Django, Spring, Android, Shiny,
-                JavaScript, jQuery, PHP, HTML, CSS)
-              </p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>
-                Relational and non-relational databases (MySQL, PostgreSQL,
-                MongoDB, Redis, Neo4j, RDF, SPARQL)
-              </p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Computer graphics (OpenGL)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Blockchain technology (Ethereum platform, smart contracts)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Bioinformatics (FASTA)</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <hr />
-      <!-- Interests -->
-      <section id="interests">
-        <div class="w-100">
-          <h2>Interests</h2>
-          <p>
-            In my spare time, I am keen on going out with friends, going to the
-            seaside, play sports, travel and study.
-            <br />
-            I have always been very careful and focused on studying, as can be
-            seen from the results obtained so far.
-            <br />
-            I also like to stay at home, relax watching comedies or sci-fi TV
-            series and cook, as my italian culture requires.
-          </p>
-          <p>
-            During my youthness, I have been involved in several inclusion,
-            social cohesion and human rights projects with the goal of helping
-            the neediest.
-          </p>
-          <p class="mb-6 d-none d-lg-block">
-            Since I love to meet new cultures, the entire world is in my bucket
-            list:
-          </p>
-          <div id="world-map" class="d-none d-lg-block"></div>
-        </div>
-      </section>
-    </main>
-  </body>
+    </section>
+    <hr />
+    <!-- Interests -->
+    <section id="interests">
+      <div class="w-100">
+        <h2>Interests</h2>
+        <p>
+          In my spare time, I am keen on going out with friends, going to the
+          seaside, play sports, travel and study.
+          <br />
+          I have always been very careful and focused on studying, as can be
+          seen from the results obtained so far.
+          <br />
+          I also like to stay at home, relax watching comedies or sci-fi TV
+          series and cook, as my italian culture requires.
+        </p>
+        <p>
+          During my youthness, I have been involved in several inclusion,
+          social cohesion and human rights projects with the goal of helping
+          the neediest.
+        </p>
+        <p class="mb-6 d-none d-lg-block">
+          Since I love to meet new cultures, the entire world is in my bucket
+          list:
+        </p>
+        <div id="world-map" class="d-none d-lg-block"></div>
+      </div>
+    </section>
+  </main>
+</body>
 
-  <!-- jQuery plugin JS -->
-  <script
-    crossorigin="anonymous"
-    integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    type="text/javascript"
-  ></script>
-  <!-- Font Awesome icons (free version) -->
-  <script
-    crossorigin="anonymous"
-    data-auto-a11y="true"
-    integrity="sha384-xBXmu0dk1bEoiwd71wOonQLyH+VpgR1XcDH3rtxrLww5ajNTuMvBdL5SOiFZnNdp"
-    src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"
-    type="text/javascript"
-  ></script>
-  <!-- Bootstrap core JS -->
-  <script
-    crossorigin="anonymous"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    type="text/javascript"
-  ></script>
-  <!-- amCharts JS -->
-  <script
-    crossorigin="anonymous"
-    src="https://www.amcharts.com/lib/3/ammap.js"
-    type="text/javascript"
-  ></script>
-  <script
-    crossorigin="anonymous"
-    src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js"
-    type="text/javascript"
-  ></script>
-  <script
-    crossorigin="anonymous"
-    src="https://www.amcharts.com/lib/3/themes/dark.js"
-    type="text/javascript"
-  ></script>
-  <!-- Core JS-->
-  <script src="src/js/html.js" type="text/javascript"></script>
-  <!-- MD  -->
-  <script src="src/js/md.js" type="module"></script>
-  <!-- PDF  -->
-  <script src="src/js/pdf.js" type="module"></script>
-  <script
-    crossorigin="anonymous"
-    integrity="sha384-dRcNLj4gKRUUG7H3ZJo9C8mCs06hJO6glmaGw61OH7ejMCWktejWbVbYS6hIYhKg"
-    src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"
-    type="text/javascript"
-  ></script>
+<!-- jQuery plugin JS -->
+<script crossorigin="anonymous" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+<!-- Font Awesome icons (free version) -->
+<script crossorigin="anonymous" data-auto-a11y="true"
+  integrity="sha384-xBXmu0dk1bEoiwd71wOonQLyH+VpgR1XcDH3rtxrLww5ajNTuMvBdL5SOiFZnNdp"
+  src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" type="text/javascript"></script>
+<!-- Bootstrap core JS -->
+<script crossorigin="anonymous" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<!-- amCharts JS -->
+<script crossorigin="anonymous" src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js"
+  type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+<!-- Core JS-->
+<script src="src/js/html.js" type="text/javascript"></script>
+<!-- MD  -->
+<script src="src/js/md.js" type="module"></script>
+<!-- PDF  -->
+<script src="src/js/pdf.js" type="module"></script>
+<script crossorigin="anonymous" integrity="sha384-dRcNLj4gKRUUG7H3ZJo9C8mCs06hJO6glmaGw61OH7ejMCWktejWbVbYS6hIYhKg"
+  src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js" type="text/javascript"></script>
+
 </html>
