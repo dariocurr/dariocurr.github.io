@@ -21,7 +21,7 @@ jobs:
       - name: Show tests summary
         uses: test-summary/action@v1
         with:
-          paths: junit.xml 
+          paths: junit.xml
           show: all
         if: always()
 
