@@ -7,7 +7,6 @@
   },
   "devDependencies": {
     "jest": "latest",
-    "jest-environment-jsdom": "latest",
     "jest-junit": "latest"
   },
   "jest": {
