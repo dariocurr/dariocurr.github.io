@@ -1,21 +1,21 @@
 {
-	"name": "dariocurr.github.io",
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
-	},
-	"devDependencies": {
-		"jest": "latest",
-		"jest-environment-jsdom": "latest",
-		"jest-junit": "latest"
-	},
-	"jest": {
-		"reporters": [
-			"default",
-			"jest-junit"
-		],
-		"testEnvironment": "jsdom",
-		"verbose": true
-	}
+  "name": "dariocurr.github.io",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "devDependencies": {
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
+    "jest-junit": "latest"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "testEnvironment": "jsdom",
+    "verbose": true
+  }
 }

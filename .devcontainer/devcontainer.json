@@ -1,12 +1,11 @@
-// for format details, see https://aka.ms/vscode-remote/devcontainer.json
 {
-	"name": "Node",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": {
-			"USER": "node"
-		}
-	},
-	"remoteUser": "node"
+  "name": "Node",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "USER": "node"
+    }
+  },
+  "remoteUser": "node"
 }
