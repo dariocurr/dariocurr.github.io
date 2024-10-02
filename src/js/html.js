@@ -126,7 +126,7 @@ var map = AmCharts.makeChart("world-map", {
                 showAsSelected: true,
             },
             {
-                id: "MO",
+                id: "MA",
                 showAsSelected: true,
             },
             {
