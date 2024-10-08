@@ -3,8 +3,6 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    labels:
-      - github-workflows dependencies
     schedule:
-      interval: weekly
+      interval: daily
     target-branch: develop
