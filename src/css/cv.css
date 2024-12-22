@@ -3,78 +3,88 @@
 /* CHROME, EDGE, SAFARI */
 
 body::-webkit-scrollbar {
-	width: 8px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-	background: transparent;
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #555;
-	border-radius: 20px;
+  background-color: #555;
+  border-radius: 20px;
 }
 
 /* FIREFOX */
 
 body {
-	scrollbar-width: thin;
-	scrollbar-color: #555 transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
 }
 
 /* END EDIT */
 
 body {
-	font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	font-size: 0.9rem !important;
-	background-color: #121212;
-	color: #aaa;
+  font-family:
+    "Muli",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-size: 0.9rem !important;
+  background-color: #121212;
+  color: #aaa;
 }
 
 section {
-	display: flex;
-	align-items: center;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	padding-top: 6rem;
-	padding-bottom: 9rem;
-	min-height: 105vh;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 6rem;
+  padding-bottom: 9rem;
+  min-height: 105vh;
 }
 
 section#skills div ul li p {
-	margin-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 #navbar-list {
-	font-weight: 800;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 #navbar-list li {
-	display: block;
+  display: block;
 }
 
 #navbar-list a {
-	color: #aaa;
+  color: #aaa;
 }
 
 #navbar-list a:hover {
-	color: #ddd;
+  color: #ddd;
 }
 
 #navbar-list a.active {
-	color: #fff;
+  color: #fff;
 }
 
 #navbar-list button {
-	border-color: #555;
+  border-color: #555;
 }
 
 ul {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 h1,
@@ -83,257 +93,273 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-		"Noto Color Emoji";
-	text-transform: uppercase;
-	font-weight: 700;
-	color: #eee;
+  font-family:
+    "Saira Extra Condensed",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eee;
 }
 
 h1 {
-	line-height: 1;
-	font-size: 6rem;
-	margin-bottom: 0;
-	position: relative;
-	right: 0.13rem;
+  line-height: 1;
+  font-size: 6rem;
+  margin-bottom: 0;
+  position: relative;
+  right: 0.13rem;
 }
 
 h2 {
-	font-size: 3.5rem;
-	margin-bottom: 4.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 4.5rem;
 }
 
 h3 {
-	font-size: 2rem;
-	margin-bottom: 0;
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 hr {
-	margin: 0;
+  margin: 0;
 }
 
 a {
-	color: #f59d62;
-	text-decoration: none;
+  color: #f59d62;
+  text-decoration: none;
 }
 
 a:hover {
-	color: #f58031;
+  color: #f58031;
 }
 
 article:not(:last-child) {
-	margin-bottom: 4.5rem;
+  margin-bottom: 4.5rem;
 }
 
 button {
-	color: #f59d62 !important;
-	border-color: #f59d62 !important;
-	font-size: 0.9rem !important;
+  color: #f59d62 !important;
+  border-color: #f59d62 !important;
+  font-size: 0.9rem !important;
 }
 
 button:hover {
-	color: #fff !important;
-	background-color: #f59d62 !important;
+  color: #fff !important;
+  background-color: #f59d62 !important;
 }
 
 button:focus {
-	box-shadow: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
 }
 
 p {
-	text-align: justify;
+  text-align: justify;
 }
 
 .mb-6 {
-	margin-bottom: 4rem !important;
+  margin-bottom: 4rem !important;
 }
 
 .mt-10 {
-	margin-top: 10rem !important;
+  margin-top: 10rem !important;
 }
 
 .w-35 {
-	width: 35% !important;
+  width: 35% !important;
 }
 
 .text-primary {
-	color: #f59d62 !important;
+  color: #f59d62 !important;
 }
 
 .lead {
-	font-size: 1.1rem;
-	margin-bottom: 4.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 4.5rem;
 }
 
 .subheading {
-	font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-		"Noto Color Emoji";
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	font-weight: 500;
+  font-family:
+    "Saira Extra Condensed",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .icons {
-	display: grid;
-	grid-gap: 1.5rem;
-	grid-template-columns: repeat(auto-fill, 4rem);
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, 4rem);
 }
 
 .social-icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	height: 3.5rem;
-	width: 3.5rem;
-	background-color: #333;
-	color: #eee;
-	border-radius: 100%;
-	font-size: 1.5rem;
-	transition: all 0.15s ease-in;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #333;
+  color: #eee;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  transition: all 0.15s ease-in;
 }
 
 .social-icon:hover {
-	background-color: #f59d62;
-	color: #fff;
-	transform: scale(1.075) perspective(1px)
+  background-color: #f59d62;
+  color: #fff;
+  transform: scale(1.075) perspective(1px);
 }
 
 #tools {
-	justify-items: center;
+  justify-items: center;
 }
 
 ul.nav-sections li {
-	padding-top: 0.25rem;
+  padding-top: 0.25rem;
 }
 
 ul.languages li {
-	padding-top: 0.35rem;
+  padding-top: 0.35rem;
 }
 
 ul#tools li {
-	padding-top: 0.5rem;
-	display: inline-block;
+  padding-top: 0.5rem;
+  display: inline-block;
 }
 
 ul.workflow li {
-	padding-top: 0.35rem;
+  padding-top: 0.35rem;
 }
 
 section#skills ul:not(:last-child) {
-	margin-bottom: 4.5rem;
+  margin-bottom: 4.5rem;
 }
 
 section#skills h3 {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #world-map {
-	width: 720px;
-	height: 360px;
-	margin: auto;
+  width: 720px;
+  height: 360px;
+  margin: auto;
 }
 
 @media (max-width: 992px) {
-	nav {
-		background-color: #333;
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
-		justify-content: space-between !important;
-	}
+  nav {
+    background-color: #333;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    justify-content: space-between !important;
+  }
 
-	button {
-		transition: none !important;
-	}
+  button {
+    transition: none !important;
+  }
 
-	button:hover {
-		transform: none !important;
-	}
+  button:hover {
+    transform: none !important;
+  }
 
-	section {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-	#nav-home {
-		color: #eee;
-	}
+  #nav-home {
+    color: #eee;
+  }
 
-	#nav-toggler {
-		color: #aaa
-	}
+  #nav-toggler {
+    color: #aaa;
+  }
 
-	#nav-toggler:hover {
-		background-color: transparent !important;
-	}
+  #nav-toggler:hover {
+    background-color: transparent !important;
+  }
 
-	#repo-icon {
-		font-size: 1.25rem;
-	}
+  #repo-icon {
+    font-size: 1.25rem;
+  }
 
-	#repo-link {
-		font-size: 0.9rem;
-		position: relative;
-		bottom: 0.14rem;
-	}
-
+  #repo-link {
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0.14rem;
+  }
 }
 
 @media (min-width: 992px) {
+  @media (max-height: 800px) {
+    #navbar-list {
+      display: none !important;
+    }
+  }
 
-	@media (max-height: 800px) {
-		#navbar-list {
-			display: none !important;
-		}
-	}
+  body {
+    padding-left: 17.5rem;
+  }
 
-	body {
-		padding-left: 17.5rem;
-	}
+  section {
+    padding-right: 3rem;
+  }
 
-	section {
-		padding-right: 3rem;
-	}
+  button {
+    transition: all 0.15s ease-in;
+  }
 
-	button {
-		transition: all 0.15s ease-in;
-	}
+  button:hover {
+    transform: scale(1.075) perspective(1px);
+  }
 
-	button:hover {
-		transform: scale(1.075) perspective(1px);
-	}
+  nav {
+    text-align: center;
+    flex-direction: column;
+    width: 17.5rem;
+    height: 100vh;
+    border-right: 1px solid #333;
+    justify-content: center !important;
+  }
 
-	nav {
-		text-align: center;
-		flex-direction: column;
-		width: 17.5rem;
-		height: 100vh;
-		border-right: 1px solid #333;
-		justify-content: center !important;
-	}
+  span.fa-li {
+    padding-top: 0.05rem;
+  }
 
-	span.fa-li {
-		padding-top: 0.05rem;
-	}
+  span.fa-li + * {
+    margin-left: 0.35rem;
+  }
 
-	span.fa-li+* {
-		margin-left: 0.35rem;
-	}
+  #nav-bottom {
+    position: fixed;
+    bottom: 3.5%;
+  }
 
-	#nav-bottom {
-		position: fixed;
-		bottom: 3.5%;
-	}
+  #repo-icon {
+    font-size: 1.55rem;
+  }
 
-	#repo-icon {
-		font-size: 1.55rem;
-	}
-
-	#repo-link {
-		position: relative;
-		bottom: 0.2245rem;
-	}
+  #repo-link {
+    position: relative;
+    bottom: 0.2245rem;
+  }
 }
