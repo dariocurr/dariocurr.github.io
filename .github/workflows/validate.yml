@@ -12,18 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@main
 
+      - uses: actions/setup-node@v4
+
       - name: Install node modules
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm test
 
       - name: Show tests summary
-        uses: test-summary/action@v1
+        uses: test-summary/action@v2
         with:
           paths: junit.xml
           show: all
-        if: always()
 
       - name: Merge `develop` in `main` branch
         uses: devmasx/merge-branch@master
