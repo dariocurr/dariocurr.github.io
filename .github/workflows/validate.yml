@@ -1,4 +1,4 @@
-name: "Validate"
+name: validate
 
 on:
   workflow_dispatch:
@@ -16,23 +16,23 @@ jobs:
 
       - uses: actions/setup-node@v4
 
-      - name: Install node modules
+      - name: install node modules
         run: npm ci
 
-      - name: Run tests
+      - name: run tests
         run: npm test
 
-      - name: Show tests summary
+      - name: show tests summary
         uses: test-summary/action@v2
         with:
           paths: junit.xml
           show: all
 
-      - name: Merge `develop` in `main` branch
+      - name: merge `develop` in `main` branch
         uses: devmasx/merge-branch@master
         with:
           type: now
           from_branch: develop
           target_branch: main
           github_token: ${{ github.token }}
-          message: Merging `develop` into `main` using Github Actions
+          message: merging `develop` into `main` using github actions
