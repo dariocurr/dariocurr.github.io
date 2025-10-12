@@ -208,7 +208,7 @@ function getCurriculumVitae() {
   var content = [];
   var sections = document.querySelectorAll("section");
 
-  // About
+  // about
   var about = sections[0];
   content.push({
     text: clean(about.querySelector("h1").innerHTML).toUpperCase() + "\n\n",
@@ -281,7 +281,7 @@ function getCurriculumVitae() {
     createExperienceAndEducationListCurriculumPDF(sections[1]),
   );
 
-  // Publications
+  // publications
   var publications = sections[2];
   content.push({
     text:
@@ -296,12 +296,12 @@ function getCurriculumVitae() {
   ]);
   content.push("\n\n\n\n");
 
-  // Education
+  // education
   content = content.concat(
     createExperienceAndEducationListCurriculumPDF(sections[3]),
   );
 
-  // Skills
+  // skills
   var skills = sections[4];
   content.push({
     text: clean(skills.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
@@ -359,23 +359,23 @@ function getCurriculumVitae() {
   content.push(createSkillsListPDF(h3s[3].nextElementSibling, 15, 10));
   //content.push("\n\n\n\n")
 
-  /* Interests
-	  var interests = sections[5];
-	  content.push({
-		  text: clean(interests.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
-		  style: "h2"
-	  });
-	  content.push(clean(interests.querySelector("p").innerHTML));
-	  */
+  /* interests
+  var interests = sections[5];
+  content.push({
+    text: clean(interests.querySelector("h2").innerHTML).toUpperCase() + "\n\n",
+    style: "h2"
+  });
+  content.push(clean(interests.querySelector("p").innerHTML));
+  */
 
-  // PDF
+  // pdf
   var docDefinition = {
     content: content,
     info: {
-      title: "Dario Curreri's Curriculum Vitae",
-      author: "Dario Curreri",
-      creator: "Dario Curreri",
-      producer: "Dario Curreri",
+      title: "dario curreri's curriculum vitae",
+      author: "dario curreri",
+      creator: "dario curreri",
+      producer: "dario curreri",
     },
     defaultStyle: {
       fontSize: 10,
@@ -452,7 +452,7 @@ function getResume() {
   var content = [];
   var sections = document.querySelectorAll("section");
 
-  // About
+  // about
   var about = sections[0];
   content.push({
     text: clean(about.querySelector("h1").innerHTML).toUpperCase(),
@@ -518,7 +518,7 @@ function getResume() {
     style: "sectionDivisor",
   });
 
-  // Experience and Education
+  // experience and education
   var columns = [[], []];
   for (var i = 1; i < 4; i += 2) {
     var section = sections[i];
@@ -576,7 +576,7 @@ function getResume() {
     });
   }
 
-  // Publications
+  // publications
   var publications = sections[2];
   columns[0].push({
     text: "\n",
@@ -602,7 +602,7 @@ function getResume() {
     style: "sectionDivisor",
   });
 
-  // Skills
+  // skills
   var skills = sections[4];
   content.push({
     text: clean(skills.querySelector("h2").innerHTML).toUpperCase(),
@@ -684,14 +684,14 @@ function getResume() {
     columnGap: 45,
   });
 
-  // PDF
+  // pdf
   var docDefinition = {
     content: content,
     info: {
-      title: "Dario Curreri's Resume",
-      author: "Dario Curreri",
-      creator: "Dario Curreri",
-      producer: "Dario Curreri",
+      title: "dario curreri's resume",
+      author: "dario curreri",
+      creator: "dario curreri",
+      producer: "dario curreri",
     },
     defaultStyle: {
       fontSize: 7.5228,

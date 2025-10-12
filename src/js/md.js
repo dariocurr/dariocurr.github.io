@@ -5,7 +5,7 @@ export function md() {
   var md = "";
   var sections = document.querySelectorAll("section");
 
-  // About
+  // about
   var about = sections[0];
   md += "# " + clean(about.querySelector("h1").textContent) + "\n<br>\n\n";
   var img = document.querySelector("img");
@@ -25,7 +25,7 @@ export function md() {
     .join(" ");
   md += "\n<br>\n<br>\n<br>\n\n";
 
-  // Experience and Education
+  // experience and education
   for (var i = 1; i < 4; i += 2) {
     var section = sections[i];
     md += "## " + clean(section.querySelector("h2").textContent) + "\n<br>\n\n";
@@ -52,7 +52,7 @@ export function md() {
     md += "<br>\n\n";
   }
 
-  // Publications
+  // publications
   var publications = sections[2];
   md +=
     "## " + clean(publications.querySelector("h2").textContent) + "\n<br>\n\n";
@@ -62,7 +62,7 @@ export function md() {
   }
   md += "\n<br>\n<br>\n<br>\n\n";
 
-  // Skills
+  // skills
   var skills = sections[4];
   md += "## " + clean(skills.querySelector("h2").textContent) + "\n<br>\n\n";
   skills.querySelectorAll("h3").forEach((h3) => {
@@ -95,7 +95,7 @@ export function md() {
   md = md.substring(0, md.length - 1);
   md += "<br>\n\n";
 
-  // Interests
+  // interests
   var interests = sections[5];
   md += "## " + clean(interests.querySelector("h2").textContent) + "\n<br>\n\n";
   md += clean(interests.querySelector("p").textContent);
