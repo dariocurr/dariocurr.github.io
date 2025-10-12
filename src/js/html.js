@@ -22,123 +22,127 @@ var map = AmCharts.makeChart("world-map", {
     getAreasFromMap: true,
     areas: [
       {
-        id: "BE",
+        id: "BE", // Belgium
         showAsSelected: true,
       },
       {
-        id: "HR",
+        id: "HR", // Croatia
         showAsSelected: true,
       },
       {
-        id: "CZ",
+        id: "CZ", // Czech Republic
         showAsSelected: true,
       },
       {
-        id: "FR",
+        id: "FR", // France
         showAsSelected: true,
       },
       {
-        id: "GR",
+        id: "GR", // Greece
         showAsSelected: true,
       },
       {
-        id: "HU",
+        id: "HU", // Hungary
         showAsSelected: true,
       },
       {
-        id: "IT",
+        id: "IT", // Italy
         showAsSelected: true,
       },
       {
-        id: "LU",
+        id: "LU", // Luxembourg
         showAsSelected: true,
       },
       {
-        id: "MC",
+        id: "MC", // Monaco
         showAsSelected: true,
       },
       {
-        id: "NL",
+        id: "NL", // Netherlands
         showAsSelected: true,
       },
       {
-        id: "NO",
+        id: "NO", // Norway
         showAsSelected: true,
       },
       {
-        id: "PL",
+        id: "PL", // Poland
         showAsSelected: true,
       },
       {
-        id: "SM",
+        id: "SM", // San Marino
         showAsSelected: true,
       },
       {
-        id: "SK",
+        id: "SK", // Slovakia
         showAsSelected: true,
       },
       {
-        id: "SI",
+        id: "SI", // Slovenia
         showAsSelected: true,
       },
       {
-        id: "TR",
+        id: "TR", // Turkey
         showAsSelected: true,
       },
       {
-        id: "GB",
+        id: "GB", // United Kingdom
         showAsSelected: true,
       },
       {
-        id: "VA",
+        id: "VA", // Vatican City
         showAsSelected: true,
       },
       {
-        id: "AT",
+        id: "AT", // Austria
         showAsSelected: true,
       },
       {
-        id: "ES",
+        id: "ES", // Spain
         showAsSelected: true,
       },
       {
-        id: "DK",
+        id: "DK", // Denmark
         showAsSelected: true,
       },
       {
-        id: "BG",
+        id: "BG", // Bulgaria
         showAsSelected: true,
       },
       {
-        id: "RO",
+        id: "RO", // Romania
         showAsSelected: true,
       },
       {
-        id: "PT",
+        id: "PT", // Portugal
         showAsSelected: true,
       },
       {
-        id: "CA",
+        id: "CA", // Canada
         showAsSelected: true,
       },
       {
-        id: "AL",
+        id: "AL", // Albania
         showAsSelected: true,
       },
       {
-        id: "MA",
+        id: "MA", // Morocco
         showAsSelected: true,
       },
       {
-        id: "AU",
+        id: "AU", // Australia
         showAsSelected: true,
       },
       {
-        id: "RS",
+        id: "RS", // Serbia
         showAsSelected: true,
       },
       {
-        id: "ME",
+        id: "ME", // Montenegro
+        showAsSelected: true,
+      },
+      {
+        id: "DE", // Germany
         showAsSelected: true,
       },
     ],
