@@ -24,6 +24,25 @@ body {
 
 /* END EDIT */
 
+/* Skip link: visible on focus for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.5rem 1rem;
+  background: #f59d62;
+  color: #121212;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 body {
   font-family:
     "Muli",
@@ -361,5 +380,26 @@ section#skills h3 {
   #repo-link {
     position: relative;
     bottom: 0.2245rem;
+  }
+}
+
+@media print {
+  .skip-link,
+  #nav-toggler {
+    display: none !important;
+  }
+
+  nav {
+    position: static;
+  }
+
+  body {
+    padding-left: 0;
+  }
+
+  section {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
