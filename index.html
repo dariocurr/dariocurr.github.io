@@ -9,6 +9,14 @@
     <meta name="description" content="dario curreri's curriculum vitae" />
     <meta name="author" content="dario curreri" />
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="theme-color" content="#121212" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dario Curreri — Curriculum Vitae" />
+    <meta
+      property="og:description"
+      content="Staff Software Engineer (DevOps &amp; Platform). CV and experience."
+    />
+    <meta property="og:url" content="https://dariocurr.github.io/" />
     <title>dario curreri's curriculum vitae</title>
     <link rel="icon" href="assets/img/dev.svg" />
 
@@ -35,6 +43,7 @@
   </head>
 
   <body id="page-top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <a href="#page-top">
@@ -53,7 +62,7 @@
       </a>
       <div id="nav-bottom">
         <div class="d-none d-lg-flex mb-3 justify-content-evenly">
-          <button class="w-35 btn" onclick="pdf(shrinked=false)">
+          <button class="w-35 btn" onclick="pdf((shrinked = false))">
             Download Curriculum
           </button>
           <a
@@ -68,6 +77,7 @@
           id="repo-icon"
           href="https://github.com/dariocurr/dariocurr.github.io"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i class="fab fa-git-alt"></i>
         </a>
@@ -76,6 +86,7 @@
           class="ms-2"
           href="https://github.com/dariocurr/dariocurr.github.io"
           target="_blank"
+          rel="noopener noreferrer"
         >
           dariocurr/dariocurr.github.io
         </a>
@@ -114,7 +125,7 @@
       </div>
     </nav>
     <!-- content -->
-    <main>
+    <main id="main-content">
       <!-- about -->
       <section id="about">
         <div class="w-100">
@@ -143,41 +154,53 @@
               class="social-icon"
               href="https://scholar.google.it/citations?hl=en&user=DhJKkeMAAAAJ"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
             >
-              <i class="fas fa-graduation-cap"></i>
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
             </a>
             <a
               class="social-icon"
               href="https://www.linkedin.com/in/dariocurr"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
             </a>
             <a
               class="social-icon"
               href="https://github.com/dariocurr/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
             >
-              <i class="fab fa-github"></i>
+              <i class="fab fa-github" aria-hidden="true"></i>
             </a>
             <a
               class="social-icon"
               href="https://dariocurr.medium.com"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Medium"
             >
-              <i class="fab fa-medium"></i>
+              <i class="fab fa-medium" aria-hidden="true"></i>
             </a>
           </div>
           <div class="d-flex d-lg-none row mt-5">
             <div class="col-12">
-              <button class="btn" onclick="pdf(shrinked=false)">
+              <button class="btn" onclick="pdf((shrinked = false))">
                 Download Curriculum
               </button>
             </div>
             <div class="col-12 mt-4">
-              <button class="btn" onclick="pdf(shrinked=true)">
+              <a
+                class="btn text-decoration-none"
+                download="dario curreri's resume.pdf"
+                href="https://raw.githubusercontent.com/dariocurr/resume/main/resume.pdf"
+              >
                 Download Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -187,113 +210,131 @@
       <section id="experience">
         <div class="w-100">
           <h2>Experience</h2>
-          <article class="row">
+          <article class="row experience-with-roles">
             <div class="col-lg-9">
-              <h3><a href="https://hiop.io/" target="_blank">hiop</a></h3>
-              <div class="mb-2 d-flex justify-content-between">
-                <span class="subheading"
-                  ><strong>Staff Software Engineer</strong></span
-                >
-                <span>January '23 - Present</span>
+              <h3>hiop</h3>
+              <div class="experience-role">
+                <div class="mb-2 d-flex justify-content-between">
+                  <span class="subheading"
+                    ><strong>Staff Software Engineer</strong></span
+                  >
+                  <span>January '23 - Present</span>
+                </div>
+                <ul class="ms-4 role-details">
+                  <li>
+                    <p>
+                      Co-created
+                      <a
+                        href="https://hiop.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >hiop</a
+                      >'s flagship high-performance data processing platform,
+                      enabling rapid delivery of high-value data products:
+                    </p>
+                    <ul class="ms-4">
+                      <li>
+                        <p>
+                          Designed and implemented a resilient event-driven
+                          architecture supporting high-volume, low-latency data
+                          flows using
+                          <a
+                            href="https://grpc.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >gRPC</a
+                          >, advanced concurrency models and distributed
+                          processing
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Built a state-of-the-art access layer based on
+                          <a
+                            href="https://oauth.net/2/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >OAuth2</a
+                          >
+                          authentication RBAC
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Implemented a zero-trust architecture through a
+                          distributed proxy layer and fine-grained,
+                          service-level authorization
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Added full
+                          <a
+                            href="https://microsoft.github.io/language-server-protocol/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Language Server Protocol (LSP)</a
+                          >
+                          support, improving developer experience and enabling
+                          richer ecosystem tooling
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Increased query engine performance by 50% by rewriting
+                          critical components in Rust
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Automated user onboarding and resource provisioning,
+                          significantly reducing operational overhead
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>
+                      Architected and automated CI/CD pipelines and the
+                      end-to-end SDLC workflow, improving deployment
+                      reliability, reducing release times from days to minutes,
+                      and enabling continuous delivery across multiple services
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Led technical direction and team evolution, mentoring
+                      engineers and driving processes that supported growth from
+                      5 to 20+ team members
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <ul class="ms-4">
-                <li>
-                  <p>
-                    Co-created the company's flagship high-performance data
-                    processing platform, enabling rapid delivery of high-value
-                    data products:
-                  </p>
-                  <ul class="ms-4">
-                    <li>
-                      <p>
-                        Designed and implemented a resilient event-driven
-                        architecture supporting high-volume, low-latency data
-                        flows using
-                        <a href="https://grpc.io/" target="_blank">gRPC</a>,
-                        advanced concurrency models and distributed processing
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Built a state-of-the-art access layer based on
-                        <a href="https://oauth.net/2/" target="_blank"
-                          >OAuth2</a
-                        >
-                        authentication RBAC
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Implemented a zero-trust architecture through a
-                        distributed proxy layer and fine-grained, service-level
-                        authorization
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Added full
-                        <a
-                          href="https://microsoft.github.io/language-server-protocol/"
-                          target="_blank"
-                          >Language Server Protocol (LSP)</a
-                        >
-                        support, improving developer experience and enabling
-                        richer ecosystem tooling
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Increased query engine performance by 50% by rewriting
-                        critical components in Rust
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Automated user onboarding and resource provisioning,
-                        significantly reducing operational overhead
-                      </p>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <p>
-                    Architected and automated CI/CD pipelines and the end-to-end
-                    SDLC workflow, improving deployment reliability, reducing
-                    release times from days to minutes, and enabling continuous
-                    delivery across multiple services
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Led technical direction and team evolution, mentoring
-                    engineers and driving processes that supported growth from 5
-                    to 20+ team members
-                  </p>
-                </li>
-              </ul>
-              <div class="mb-2 mt-3 d-flex justify-content-between">
-                <span class="subheading"
-                  ><strong>Junior Software Engineer</strong></span
-                >
-                <span>October '21 - December '22</span>
+              <div class="experience-role">
+                <div class="mb-2 mt-3 d-flex justify-content-between">
+                  <span class="subheading"
+                    ><strong>Junior Software Engineer</strong></span
+                  >
+                  <span>October '21 - December '22</span>
+                </div>
+                <ul class="ms-4 role-details">
+                  <li>
+                    <p>
+                      Co-created the framework and infrastructure for real-time
+                      ML/DL applications, enabling low-latency inference and
+                      robust production deployments
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Developed and maintained 20+ core libraries powering the
+                      company's internal toolchain, establishing shared
+                      abstractions, coding standards, and scalable development
+                      practice
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <ul class="ms-4">
-                <li>
-                  <p>
-                    Co-created the framework and infrastructure for real-time
-                    ML/DL applications, enabling low-latency inference and
-                    robust production deployments
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Developed and maintained 20+ core libraries powering the
-                    company's internal toolchain, establishing shared
-                    abstractions, coding standards, and scalable development
-                    practice
-                  </p>
-                </li>
-              </ul>
             </div>
             <div class="col-lg-3 text-lg-end pt-1">
               <span class="text-primary">October '21 - Present</span>
@@ -307,22 +348,34 @@
               </div>
               <p class="mb-2">
                 Collaborator of
-                <a href="https://www.ibf.cnr.it" target="_blank">
+                <a
+                  href="https://www.ibf.cnr.it"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Biophysics Institute of Palermo's CNR (National Research
                   Council)
                 </a>
                 involved in the
-                <a href="https://www.humanbrainproject.eu/en/" target="_blank">
+                <a
+                  href="https://www.humanbrainproject.eu/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Human Brain Project</a
                 >
                 with the aim of developing a Python and JS based web application
                 named
-                <a href="https://hhnb.ebrains-italy.eu/efelg/" target="_blank"
+                <a
+                  href="https://hhnb.ebrains-italy.eu/efelg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >NeuroFeatureExtract</a
                 >
                 to analyze electrophysiological features (<a
                   href="https://www.frontiersin.org/articles/10.3389/fninf.2021.713899/full"
                   target="_blank"
+                  rel="noopener noreferrer"
                   >paper</a
                 >).
               </p>
@@ -340,7 +393,11 @@
               <p>
                 Practitioner on efficient algorithms and technologies for the
                 analysis of biological sequences represented in FASTA format at
-                <a href="https://www.ismett.edu/en/" target="_blank">
+                <a
+                  href="https://www.ismett.edu/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   ISMETT (Mediterranean Institute for Transplantation and
                   Advanced Specialized Therapies)</a
                 >, as part of a university internship project
@@ -360,7 +417,12 @@
               </div>
               <p>
                 Collaborator of a research project led by
-                <a href="https://www.unina.it/en_GB" target="_blank">UNINA</a>
+                <a
+                  href="https://www.unina.it/en_GB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >UNINA</a
+                >
                 with the aim of developing a Python-based ML fuzzy classifier to
                 diagnose celiac disease in Sicilian and Maltese children
               </p>
@@ -377,7 +439,10 @@
               </div>
               <p>
                 Web developer for ICT solutions company
-                <a href="https://www.informamuse.com/en/home/" target="_blank"
+                <a
+                  href="https://www.informamuse.com/en/home/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >Informamuse</a
                 >, as part of a university internship project
               </p>
@@ -401,6 +466,7 @@
                 <a
                   href="https://www.frontiersin.org/articles/10.3389/fninf.2021.713899/full"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="paper"
                 >
                   The EBRAINS NeuroFeatureExtract: an online resource for the
@@ -427,13 +493,18 @@
               </div>
               <p>
                 Double Master's degree achieved cum laude at
-                <a href="https://www.unipa.it/mobilita/en/" target="_blank">
+                <a
+                  href="https://www.unipa.it/mobilita/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   UNIPA
                 </a>
                 and
                 <a
                   href="https://www.univ-gustave-eiffel.fr/en/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   UGE
                 </a>
@@ -441,6 +512,7 @@
                 <a
                   href="https://raw.githubusercontent.com/dariocurr/thesis/main/thesis.pdf"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   RDF data and columnar formats
                 </a>
@@ -466,6 +538,7 @@
                 <a
                   href="https://www.univ-gustave-eiffel.fr/en/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   UGE
                 </a>
@@ -488,7 +561,11 @@
               </div>
               <p>
                 Participation in
-                <a href="https://cmmrs2020.mpi-sws.org/" target="_blank">
+                <a
+                  href="https://cmmrs2020.mpi-sws.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   CMMRS 2020
                 </a>
                 about emerging trends in computer science
@@ -506,7 +583,11 @@
               </div>
               <p>
                 Participation in
-                <a href="http://einfose.ffos.hr/summer-school/" target="_blank">
+                <a
+                  href="http://einfose.ffos.hr/summer-school/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   ESSIS 2019
                 </a>
                 about the new information science methodologies
@@ -526,11 +607,19 @@
               </div>
               <p>
                 Bachelor's degree achieved cum laude at
-                <a href="https://www.unipa.it/mobilita/en/" target="_blank">
+                <a
+                  href="https://www.unipa.it/mobilita/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   UNIPA
                 </a>
                 in 3 out of 3 years, with final thesis about
-                <a href="assets/img/poster.png" target="_blank">
+                <a
+                  href="assets/img/poster.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   suffix array data structure
                 </a>
               </p>
@@ -552,7 +641,13 @@
               </div>
               <p>
                 Outstanding 5-month study experience at
-                <a href="https://www.elte.hu/en/" target="_blank"> ELTE </a>
+                <a
+                  href="https://www.elte.hu/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ELTE
+                </a>
                 University of Budapest involved in the Erasmus+ project, which
                 gave the opportunity to improve a vast set of skills and learn
                 about new cultures
@@ -572,7 +667,11 @@
               </div>
               <p>
                 Diploma obtained at
-                <a href="https://www.liceopalmeri.edu.it/" target="_blank">
+                <a
+                  href="https://www.liceopalmeri.edu.it/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Liceo Scientifico Palmeri
                 </a>
                 in 5 out of 5 years
@@ -591,7 +690,11 @@
           <h2>Skills</h2>
           <h3>Certifications</h3>
           <div class="mb-4">
-            <a href="https://bestr.it/verify/EJ2XAFDPBL" target="_blank">
+            <a
+              href="https://bestr.it/verify/EJ2XAFDPBL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 alt="Data Science"
                 class="my-4 me-4"
@@ -604,6 +707,7 @@
             <a
               href="https://www.credly.com/badges/33614ca6-2f0d-456b-87e9-bf8b8591cbf8/public_url"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="AWS Cloud Practitioner"
@@ -616,6 +720,7 @@
             <a
               href="https://www.credly.com/badges/e9b6c64c-2175-4345-950b-6331fd88af43/public_url"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="AWS Developer Associate"
@@ -628,6 +733,7 @@
             <a
               href="https://www.credly.com/badges/0f158c45-adb0-4ac9-9d5f-0039649e4808/public_url"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="GCP Cloud Digital Leader"
@@ -641,6 +747,7 @@
             <a
               href="https://www.credly.com/badges/0f59d53a-1ecb-4f6f-8a84-96fa3cb55965/public_url"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="GitHub Foundations"
@@ -653,6 +760,7 @@
             <a
               href="https://www.credly.com/badges/6da40853-2bc6-4738-887e-8710a10e7a29/public_url"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="GitHub Actions"
@@ -665,6 +773,7 @@
             <a
               href="https://www.credly.com/badges/b3c3ae21-61a9-4519-85d6-29a3bb8c443a/public_url"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="GitHub Advanced Security"
@@ -731,68 +840,90 @@
             <li><i class="fas fa-2x fa-terminal"></i></li>
             <li><i class="fab fa-2x fa-git-alt"></i></li>
             <li><i class="fab fa-2x fa-docker"></i></li>
-            <li><i class="fas fa-2x fa-cloud"></i></li>
             <li><i class="fab fa-2x fa-rust"></i></li>
             <li><i class="fab fa-2x fa-python"></i></li>
             <li><i class="fab fa-2x fa-java"></i></li>
             <li><i class="fab fa-2x fa-cuttlefish"></i></li>
             <li><i class="fab fa-2x fa-node"></i></li>
+            <li><i class="fas fa-2x fa-cloud"></i></li>
             <li><i class="fas fa-2x fa-database"></i></li>
           </ul>
           <h3>Workflow</h3>
           <ul class="fa-ul workflow">
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>DevOps (Bash, Git, Docker, CI/CD pipelines)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Cloud (AWS, GCP)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
+              <span class="fa-li"
+                ><i class="fas fa-gears" aria-hidden="true"></i
+              ></span>
               <p>
-                Data science (supervised and unsupervised learning, Pyhton, R,
-                MATLAB, keras, tensorflow, scikit-learn, scipy, pandas,
-                matplotlib)
+                DevOps &amp; automation — Bash, Git, Docker, CI/CD, Terraform,
+                Pulumi
               </p>
             </li>
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
+              <span class="fa-li"
+                ><i class="fas fa-cloud" aria-hidden="true"></i
+              ></span>
+              <p>Cloud platforms — AWS, GCP</p>
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-brain" aria-hidden="true"></i
+              ></span>
               <p>
-                Big data (ETL/ELT, data warehousing, data lake, MapReduce,
-                Hadoop, Spark, Dask)
+                ML &amp; data science — Python, R, MATLAB, TensorFlow, Keras,
+                scikit-learn, pandas, SciPy, Matplotlib
               </p>
             </li>
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Software engineering (Rust, Python, Java, Scala, C, C++)</p>
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
+              <span class="fa-li"
+                ><i class="fas fa-layer-group" aria-hidden="true"></i
+              ></span>
               <p>
-                Web application (FastAPI, Django, Spring, Android, Shiny,
-                JavaScript, jQuery, PHP, HTML, CSS)
+                Data engineering — ETL/ELT, warehousing, data lakes, Hadoop,
+                Spark, Dask
               </p>
             </li>
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
+              <span class="fa-li"
+                ><i class="fas fa-code" aria-hidden="true"></i
+              ></span>
+              <p>Systems &amp; languages — Rust, Python, Java, Scala, C, C++</p>
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-globe" aria-hidden="true"></i
+              ></span>
               <p>
-                Relational and non-relational databases (MySQL, PostgreSQL,
-                MongoDB, Redis, Neo4j, RDF, SPARQL)
+                Web &amp; apps — FastAPI, Django, Spring, Android, Shiny,
+                JavaScript, PHP, HTML, CSS
               </p>
             </li>
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Computer graphics (OpenGL)</p>
+              <span class="fa-li"
+                ><i class="fas fa-database" aria-hidden="true"></i
+              ></span>
+              <p>
+                Databases — SQL, NoSQL, graph (MySQL, PostgreSQL, MongoDB,
+                Redis, Neo4j, RDF, SPARQL)
+              </p>
             </li>
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Blockchain technology (Ethereum platform, smart contracts)</p>
+              <span class="fa-li"
+                ><i class="fas fa-cube" aria-hidden="true"></i
+              ></span>
+              <p>Graphics — OpenGL</p>
             </li>
             <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <p>Bioinformatics (FASTA)</p>
+              <span class="fa-li"
+                ><i class="fas fa-link" aria-hidden="true"></i
+              ></span>
+              <p>Blockchain — Ethereum, smart contracts</p>
+            </li>
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-dna" aria-hidden="true"></i
+              ></span>
+              <p>Bioinformatics — FASTA, sequence analysis</p>
             </li>
           </ul>
         </div>
@@ -804,7 +935,7 @@
           <h2>Interests</h2>
           <p>
             In my spare time, I am keen on going out with friends, going to the
-            seaside, play sports, travel and study.
+            seaside, playing sports, travel and study.
             <br />
             I have always been very careful and focused on studying, as can be
             seen from the results obtained so far.
@@ -813,9 +944,9 @@
             series and cook, as my italian culture requires.
           </p>
           <p>
-            During my youthness, I have been involved in several inclusion,
-            social cohesion and human rights projects with the goal of helping
-            the neediest.
+            During my youth, I have been involved in several inclusion, social
+            cohesion and human rights projects with the goal of helping the
+            neediest.
           </p>
           <p class="mb-6 d-none d-lg-block">
             Since I love to meet new cultures, the entire world is in my bucket
