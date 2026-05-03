@@ -149,6 +149,10 @@ var map = AmCharts.makeChart("world-map", {
         id: "ID", // Indonesia
         showAsSelected: true,
       },
+      {
+        id: "AE", // Arab Emirates
+        showAsSelected: true,
+      },
     ],
   },
   areasSettings: {
