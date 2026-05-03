@@ -145,6 +145,14 @@ var map = AmCharts.makeChart("world-map", {
         id: "DE", // Germany
         showAsSelected: true,
       },
+      {
+        id: "ID", // Indonesia
+        showAsSelected: true,
+      },
+      {
+        id: "AE", // Arab Emirates
+        showAsSelected: true,
+      },
     ],
   },
   areasSettings: {
