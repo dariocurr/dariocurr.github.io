@@ -6,7 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <meta name="description" content="dario curreri's curriculum vitae" />
+    <meta
+      name="description"
+      content="Dario Curreri — Founding Engineer and Staff Software Engineer at hiop. 5+ years building high-throughput Rust/Python distributed data systems. OSS contributor to Apache Arrow and DataFusion."
+    />
     <meta name="author" content="dario curreri" />
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
     <meta name="theme-color" content="#121212" />
@@ -14,7 +17,7 @@
     <meta property="og:title" content="Dario Curreri — Curriculum Vitae" />
     <meta
       property="og:description"
-      content="Staff Software Engineer (DevOps &amp; Platform). CV and experience."
+      content="Founding Engineer and Staff Software Engineer at hiop. Distributed data platforms in Rust and Python. Apache Arrow / DataFusion contributor."
     />
     <meta property="og:url" content="https://dariocurr.github.io/" />
     <title>dario curreri's curriculum vitae</title>
@@ -106,6 +109,9 @@
             <a class="nav-link" href="#experience">Experience</a>
           </li>
           <li>
+            <a class="nav-link" href="#open-source">Open Source</a>
+          </li>
+          <li>
             <a class="nav-link" href="#publications">Publications</a>
           </li>
           <li>
@@ -134,16 +140,33 @@
             </span>
           </div>
           <p class="lead">
-            Innovative Staff Software Engineer (DevOps & Platform) with over 5
-            years of experience architecting cloud-native distributed systems,
-            delivering enterprise-scale software solutions, and optimizing
-            high-performance data processing pipelines
-
+            Founding Engineer and current Staff Software Engineer at
+            <a href="https://hiop.io/" target="_blank" rel="noopener noreferrer"
+              >hiop</a
+            >, where I built the core distributed data platform from zero. 5+
+            years on high-throughput Rust and Python systems and cloud-native
+            data infrastructure, with measurable impact: 50% query latency
+            reduction, release cycles compressed from days to minutes, and
+            engineering org scaled from 5 to 15+
             <br />
-            Demonstrated expertise in designing resilient microservices
-            architectures, implementing robust CI/CD automation, and leading
-            high-performing engineering teams to successfully deliver
-            mission-critical projects with significant business impact
+            Active OSS contributor to the Apache data ecosystem (<a
+              href="https://github.com/apache/arrow-rs"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Arrow</a
+            >,
+            <a
+              href="https://github.com/apache/datafusion"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DataFusion</a
+            >) and organizer of
+            <a
+              href="https://www.meetup.com/rust-language-milano/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Rust Language Milano</a
+            >
           </p>
           <div class="icons">
             <a
@@ -205,28 +228,31 @@
               <div class="experience-role">
                 <div class="mb-2 d-flex justify-content-between">
                   <span class="subheading"
-                    ><strong>Staff Software Engineer</strong></span
+                    ><strong
+                      >Founding Engineer &middot; Staff Software
+                      Engineer</strong
+                    ></span
                   >
                   <span>January '23 - Present</span>
                 </div>
                 <ul class="ms-4 role-details">
                   <li>
                     <p>
-                      Co-created
+                      Built
                       <a
                         href="https://hiop.io/"
                         target="_blank"
                         rel="noopener noreferrer"
                         >hiop</a
-                      >'s flagship high-performance data processing platform,
-                      enabling rapid delivery of high-value data products:
+                      >'s core distributed data processing platform from zero,
+                      powering thousands of data pipelines per day:
                     </p>
                     <ul class="ms-4">
                       <li>
                         <p>
                           Designed and implemented a resilient event-driven
                           architecture supporting high-volume, low-latency data
-                          flows using
+                          ingestion using
                           <a
                             href="https://grpc.io/"
                             target="_blank"
@@ -238,6 +264,12 @@
                       </li>
                       <li>
                         <p>
+                          Reduced query engine latency by 50% by rewriting
+                          hot-path components in Rust
+                        </p>
+                      </li>
+                      <li>
+                        <p>
                           Built a state-of-the-art access layer based on
                           <a
                             href="https://oauth.net/2/"
@@ -245,14 +277,9 @@
                             rel="noopener noreferrer"
                             >OAuth2</a
                           >
-                          authentication RBAC
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Implemented a zero-trust architecture through a
-                          distributed proxy layer and fine-grained,
-                          service-level authorization
+                          authentication and RBAC, plus a zero-trust
+                          architecture with a distributed proxy layer and
+                          fine-grained, service-level authorization
                         </p>
                       </li>
                       <li>
@@ -270,31 +297,30 @@
                       </li>
                       <li>
                         <p>
-                          Increased query engine performance by 50% by rewriting
-                          critical components in Rust
+                          Automated the user onboarding and resource
+                          provisioning lifecycle, eliminating ~80% of manual
+                          operations
                         </p>
                       </li>
                       <li>
                         <p>
-                          Automated user onboarding and resource provisioning,
-                          significantly reducing operational overhead
+                          Owned on-call rotations, incident reviews and capacity
+                          planning under SLA
                         </p>
                       </li>
                     </ul>
                   </li>
                   <li>
                     <p>
-                      Architected and automated CI/CD pipelines and the
-                      end-to-end SDLC workflow, improving deployment
-                      reliability, reducing release times from days to minutes,
-                      and enabling continuous delivery across multiple services
+                      Architected end-to-end CI/CD automation across 100+
+                      services, compressing release cycles from days to minutes
+                      and enabling continuous delivery
                     </p>
                   </li>
                   <li>
                     <p>
-                      Led technical direction and team evolution, mentoring
-                      engineers and driving processes that supported growth from
-                      5 to 20+ team members
+                      Mentored 15+ engineers and helped define the hiring bar
+                      and agile processes as the org scaled from 5 to 15+
                     </p>
                   </li>
                 </ul>
@@ -438,6 +464,228 @@
             </div>
             <div class="col-lg-3 text-lg-end pt-1">
               <span class="text-primary">January '19 - April '19</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <hr />
+      <!-- open source -->
+      <section id="open-source">
+        <div class="w-100">
+          <h2>Open Source</h2>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>apache/datafusion</h3>
+              <div class="mb-2">
+                <span class="subheading">Apache Rust SQL query engine</span>
+              </div>
+              <p>
+                Authored the SQL dialect refactor, CLI helper improvements,
+                <code>saturating_add</code> overflow fix and Rust toolchain
+                bumps, contributed to the
+                <a
+                  href="https://github.com/apache/datafusion"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >project</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">5 merged PRs</span>
+            </div>
+          </article>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>apache/arrow-rs</h3>
+              <div class="mb-2">
+                <span class="subheading">Apache Arrow Rust implementation</span>
+              </div>
+              <p>
+                Shipped the RUSTSEC-2023-0086 security advisory fix (<code
+                  >lexical-core</code
+                >
+                0.8 &rarr; 1.0) and a <code>take_iter</code> lifetime refactor
+                on the
+                <a
+                  href="https://github.com/apache/arrow-rs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >project</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">2 merged PRs</span>
+            </div>
+          </article>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>datafusion-contrib/datafusion-extra-functions</h3>
+              <div class="mb-2">
+                <span class="subheading"
+                  >Extra functions for Apache DataFusion</span
+                >
+              </div>
+              <p>
+                Maintainer of the
+                <a
+                  href="https://github.com/datafusion-contrib/datafusion-extra-functions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >project</a
+                >; added Min/Max dictionary support and bumped DataFusion
+                compatibility
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">2 merged PRs</span>
+            </div>
+          </article>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>apache/datafusion-python</h3>
+              <div class="mb-2">
+                <span class="subheading"
+                  >Python bindings for Apache DataFusion</span
+                >
+              </div>
+              <p>
+                Refreshed CI pre-commit hooks, fixed linting and updated
+                dependencies on the
+                <a
+                  href="https://github.com/apache/datafusion-python"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >project</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">1 merged PR</span>
+            </div>
+          </article>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>Developer tooling &amp; CI</h3>
+              <div class="mb-2">
+                <span class="subheading"
+                  >Rust / Python build and release infrastructure</span
+                >
+              </div>
+              <p>
+                Contributions to
+                <a
+                  href="https://github.com/PyO3/maturin-action"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >PyO3/maturin-action</a
+                >
+                (Docker env <code>CARGO_HOME</code> removal),
+                <a
+                  href="https://github.com/dtolnay/rust-toolchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >dtolnay/rust-toolchain</a
+                >
+                (<code>CARGO_HOME</code> &rarr; <code>GITHUB_ENV</code>),
+                <a
+                  href="https://github.com/actions/setup-python"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >actions/setup-python</a
+                >
+                (read Python version from <code>pyproject.toml</code>) and
+                <a
+                  href="https://github.com/conda/conda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >conda/conda</a
+                >
+                (env variable deactivation handling)
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">5 merged PRs</span>
+            </div>
+          </article>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>Other ecosystems</h3>
+              <div class="mb-2">
+                <span class="subheading"
+                  >Python tooling, vector databases, documentation</span
+                >
+              </div>
+              <p>
+                Contributions to
+                <a
+                  href="https://github.com/joke2k/faker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >joke2k/faker</a
+                >,
+                <a
+                  href="https://github.com/psf/black"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >psf/black</a
+                >,
+                <a
+                  href="https://github.com/cookiecutter/cookiecutter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >cookiecutter/cookiecutter</a
+                >,
+                <a
+                  href="https://github.com/milvus-io/milvus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >milvus-io/milvus</a
+                >,
+                <a
+                  href="https://github.com/backstage/mkdocs-monorepo-plugin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >backstage/mkdocs-monorepo-plugin</a
+                >,
+                <a
+                  href="https://github.com/ultrabug/mkdocs-static-i18n"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ultrabug/mkdocs-static-i18n</a
+                >
+                and
+                <a
+                  href="https://github.com/BlueBrain/BluePyEfe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BlueBrain/BluePyEfe</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">8 merged PRs</span>
+            </div>
+          </article>
+          <article class="row">
+            <div class="col-lg-9">
+              <h3>Rust Language Milano</h3>
+              <div class="mb-2">
+                <span class="subheading">Local Rust community meetup</span>
+              </div>
+              <p>
+                Organizer of the
+                <a
+                  href="https://www.meetup.com/rust-language-milano/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >meetup group</a
+                >, bringing together Rust developers across the Milan area
+              </p>
+            </div>
+            <div class="col-lg-3 text-lg-end pt-1">
+              <span class="text-primary">Present</span>
             </div>
           </article>
         </div>
